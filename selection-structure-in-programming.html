@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Selection Structure In Programming - QnA</title>
+    <meta name="description" content="Selection Structure In Programming, , , , , , , 0, PPT - Chapter 5: Structured Programming PowerPoint Presentation - ID:655874, www.slideserve.com, 1024 x 768, jpeg, , 20, selection-structure-in-programming, QnA" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Selection Structure In Programming - QnA" />
+    <meta property="og:description" content="Selection Structure In Programming, , , , , , , 0, PPT - Chapter 5: Structured Programming PowerPoint Presentation - ID:655874, www.slideserve.com, 1024 x 768, jpeg, , 20, selection-structure-in-programming, QnA" />
+    <meta property="og:site_name" content="QnA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Selection Structure In Programming - QnA" />
+    <meta name="twitter:description" content="Selection Structure In Programming, , , , , , , 0, PPT - Chapter 5: Structured Programming PowerPoint Presentation - ID:655874, www.slideserve.com, 1024 x 768, jpeg, , 20, selection-structure-in-programming, QnA" />
+    <link rel='stylesheet' id='generate-style-css' href='https://poweredu.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://poweredu.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://poweredu.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://poweredu.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://poweredu.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://poweredu.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://poweredu.github.io">Home</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://poweredu.github.io" rel="home"> QnA</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Selection Structure In Programming</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">orcinemarkangelo</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Selection+Structure+In+Programming" alt="Selection Structure In Programming">
+                    </div>
+                    <p></p>
+                    <p>what are the different selection structure in the c program language</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-are-the-different-selection-structure-in-the-c-program-language">1.
+                                            what are the different selection structure in the c program language</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#differentiate-between-sequential-and-selection-when-it-comes-to-program-structure">2.
+                                            Differentiate between Sequential and Selection when it comes to Program Structure.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#programming-plateselect-a-mathematical-method-below1-bairstows-method2-secant-methodlook-for-an-appropriate-equation-for-the-method-you-selected-look-for-references-or-articles-related-to-the">3.
+                                            Programming Plate
+Select a Mathematical Method below:
+1. Bairstows Method
+2. Secant Method
+Look for an appropriate equation for the method you selected. Look for references or articles related to the problem.
+Requirements for the program:
+The following structures should be evident:
+1. looping structure
+2. conditional structure
+3. array
+4. return type and void type functions</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#in-weebly-the-is-first-page-that-you-will-see-after-you-log-in-answer-question-2-answer-saved-marked-out-of-1-00-not-flaggedflag-question-question-text-which-of-the-following-can-be-used-to-m">4.
+                                            In Weebly, the ( ) is first page that you will see after you log in. Answer:  Question 2 Answer saved Marked out of 1.00  Not flaggedFlag question Question text Which of the following can be used to make presentations? Select one: a. Weebly b. Google Sheets c. Prezi d. WordPress Question 3 Answer saved Marked out of 1.00  Not flaggedFlag question Question text _____ is an open source web application created by volunteer engineers from Google for disaster response purposes Select one: a. Person Finder b. Safety Check c. Google Earth d. Change.org Question 4 Answer saved Marked out of 1.00  Not flaggedFlag question Question text _____ is a web-based presentation program. Select one: a. Wordpress b. Weebly c. LibreOffice d. Prezi Question 5 Not yet answered Marked out of 1.00  Not flaggedFlag question Question text In WordPress, a ( ) is a set of design elements such as font, colours and icons that work together to your blog a certain style. Answer:  Question 6 Not yet answered Marked out of 1.00  Not flaggedFlag question Question text In GIMP, the parts of the image that are isolated are called _____ Select one: a. compression b. vector c. selection d. resolution Question 7 Not yet answered Marked out of 1.00  Not flaggedFlag question Question text The ( ) mode is GIMP's default mode. Answer:  Question 8 Not yet answered Marked out of 1.00  Not flaggedFlag question Question text ( ) is an image format that can be greatly compressed, which makes it ideal for online use. Answer:  Question 9 Not yet answered Marked out of 1.00  Not flaggedFlag question Question text The traditional team structure, with a leader and members can be compared to which shape? Select one: a. Square b. Rectangle c. Triangle d. Circle Question 10 Not yet answered Marked out of 1.00  Not flaggedFlag question Question text Weebly is an example of software tools called Select one: a. Webpage creators b. Website manager c. Website builder d. Website management system</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-this-organizational-design-has-a-few-departments-wide-spans-of-control-or-a-big-number-of-subordinates-directly-reporting-to-a-manager-has-a-centralized-authority-figure-and-has-very-little-form">5.
+                                            1. This organizational design has a few departments, wide spans of control, or a big number of subordinates directly reporting to a manager: has a centralized authority figure and has very little formalization of work: usually used by companies that start as entrepreneurial ventures.a. Simple Organization		b. Functional Organization 	c. Divisional Organization2. This organizational design is made up of workgroups or teams. They define team structures such as roles and responsibilities, and they collaboratively identify working arrangements that allow their team to deliver on their purpose and goals.a. Project Design Org. 		b. Team Design Org. 		c. Matrix-Project Design Org. 3. Which are not the basic nature of staffing (10 Pts)a. Pervasive Function		b. People-Oriented		c. Selection and Placementd. Human Objectives		e. Developing cordial working environmentf. Related to human being	g. Science as well as art		h. Manpower Planningi. Interdisciplinary in nature	j. Continous functions		k. Integral Part of General Management4. It is a set of activities designed to attract qualified applicants for job position vacancies in an organization.a. Advertising			b. Hiring			c. Recruitment5. Internal recruitment is a process of filling job vacancies through ___________________ of employees who are already part of the organization.a. Promotion and transfer	b. Internet recruiting		c. Private agencies6. It is a form of gift, prize, or recompense for merit, service, or achievement, which may have a motivating effect on the employee.a. grand prize			b. award			c. reward7. It includes recognition programs, being assigned to do rewarding jobs, or enjoying management support, ideal work environment, and convenient work hoursa. salary increase		b. vacation with pay		c. Nonfinancial compensation8. The degree to which someone is imaginative, artistically sensitive, and intellectual.a. Openness to Experience-	b. Extraversion			c. Emotional Stability-9. The theory indicates that people satisfy their needs in a specific order, from bottom to top.a. Maslov’s Theory		b. Masglow’s  Theory		c. Masslow’s Theory10. Which are the ways that can help in  elliminating communication barriers? (5pts)a. Defensiveness		b. Feedbacking			c. Simple Languaged. Roaming around		e. be emotional			f. acive lestining.pa help po​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#multiple-choice-choose-the-letter-of-the-best-answer-write-the-chosen-letteron-a-separate-sheet-of-paper-1-which-one-of-the-following-best-describes-the-product-development-process-a-the-strateg">6.
+                                            Multiple Choice. Choose the letter of the best answer. Write the chosen letteron a separate sheet of paper. 1. Which one of the following best describes the product development process? A, the strategy process for original product B. work achieved by company's research and development department C. recognize opportunities in the marketplace, create and test products to take advantage of those opportunities, and then present the products to the market, a 2. Product development starts with A. Idea generation B. Idea selection C. Product Testing 3. The components of a product or service offer include: A. customer benefits, attributes or features, warranty, and potential benefits. B. core benefits, attributes or features, support and services, and potential C. core benefits, attributes or features, support and services, and customer loyalty programs. 4. A brand must offer which one of the following to have a value? A. Consistency B. Modest Product C. Multifaceted Product 5. What is a target audience? A. The people who will not buy your item B. The possible customers of your product C. The people who have no idea of your company 9. Designs are modified in order to A. Improve the product В. Increase income C. All of the above 10. What is the primary benefit of the coat? A. Brand B. Cost C. Warmth 11. Product development only contains the framework of new products A. True B. False 12. Product differentiation is the making of product modifications to convince the potential buyer to purchase the product A. True B. False 13. Companies strive on the basis of their products physical structures only. A. True B. False 14. Most first-hand products are commercial disappointments, A. True B. False 15. Product quality is mirrored in the product price customers are willing to pay: A True B. False​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-an-attempt-to-predict-what-may-happen-in-the-future-a-setting-of-goalsc-benchmarkingb-forecastingd-contingency-planning2-when-alternatives-must-be-carefully-evaluated-by-the-decision-maker-at">7.
+                                            1. An attempt to predict what may happen in the future.A. Setting of goalsC. BenchmarkingB. ForecastingD. Contingency planning2. When alternatives must be carefully evaluated by the decision maker, at which step ofdecision-making process you are into?A. Identify the problemC. Analyze the AlternativesB. Develop AlternativesD. Select and Alternative3. Manager A encounters employee X and employee Y daily shortage on their sales for a straightweek. What do you think should Manager A do first in order to solve the problem?A. Identify the problemC. Fire the employees for incompetenceB. Develop AlternativesD. Ask for help in other employees4. It is a planning process that includes the people who will be affected by the plans and thosewho will be asked to implement them in all planning steps.A. Contingency PlanningC. BenchmarkingB. Scenario PlanningD. Participatory Planning5. Which statement best describes a Structured or Programmed Decision?A. A decision that is repetitive and can be handled using a routine approach.B. Described to be unique, non-recurring and need custom made decisions.C. Novel, unstructured decisions that are generally based on criteria that are not well-definedD. Information is more likely to be ambiguous or incomplete, and the decision maker mayneed to exercise some thoughtful judgment and creative thinking to reach a goodsolution.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#find-a-codeprogram-the-runs-the-basic-structure-1-program-each-you-can-install-coding-c-for-checking-and-compiling-the-codes-1-sequence2-selection3-looppls-answer-correctly">8.
+                                            Find a code/program the runs the basic structure. (1 program each). You can install coding c++ for checking and compiling the codes.
+1. Sequence
+2. Selection
+3. Loop
+pls answer correctly</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#a-direction-read-the-sentences-below-carefully-fu-in-the-blanks-with-thecorrect-management-role-write-your-answer-in-your-notebook1-______a-lold-out-program-strategy-to-achieve-the-desired-outcome2">9.
+                                            A. Direction: Read the sentences below carefully. Fu in the blanks with thecorrect management role.Write your answer in your notebook1.______a lold-out program strategy to achieve the desired outcome2.______is the recruitment, selection and retention of members wherein theyare given appropriate assignment with proper training and professionaldevelopment3______aids in developing a group structure with define scope of work forevery member.4._______ensures proper plon execution within the goals of the organization.5._______is directing the organization to motivate and empower individuals incarrying out the programB. Read the following sentences below carefully. Fill in the blanks with thequalities of a good leader.6._______competitiveness in thinking and logical reasoning: effective atimparting and applying knowledge.7________trustworthy of classified information: truthful. genuine, andcommitted to his/her words8._______for an uninterrupted flow in getting a demanding job done.9._______having an open mind and objectively evaluating circumstances.10.______sdccountable to task and handling of personnel9.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#selection-structure-make-a-flowchart-or-pseudocode-that-depicts-the-logic-of-a-program-that-creates-a-random-number-and-then-asks-the-user-to-think-of-a-number-between-1-and-10-the-randomly-generate">10.
+                                            Selection Structure. Make a flowchart or pseudocode that depicts the logic of a program that creates a random number and then asks the user to think of a number between 1 and 10. The randomly generated number will then be shown so that the user may check if he/she made the correct guess.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#question-1not-yet-answeredmarked-out-of-1-00not-flaggedflag-questionquestion-textscientific-management-is-based-on-the-assumption-thatselect-onea-observation-would-reveal-the-workers-need-to">11.
+                                            Question 1
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Scientific management is based on the assumption that:
+Select one:
+a. Observation would reveal the workers need to be multi-skilled.
+b. The scientific observation of people at work would reveal the one best way to do the task.
+c. Workers would receive a set wage regardless of performance.
+Question 2
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+It is the intentional structure of roles, in a formally organized enterprise.
+Select one:
+a. Informal organization
+b. Tall organization
+c. Flat organization
+d. Formal organization
+Question 3
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Benchmarking is one source of alternative solutions that is coming into wider use.
+Select one:
+True
+False
+Question 4
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+A company decision to diversify into new products and markets is an example of non-programmed decisions.
+Select one:
+True
+False
+Question 5
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+They spell out specific required actions or non-actions, allowing no discretion.
+Select one:
+a. Budgets
+b. Strategies
+c. Objectives
+d. Rules
+Question 6
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+The framework of interrelationships among individuals and departments that describe relationships of reporting and accountability is called:
+Select one:
+a. Organizational structure
+b. Span of control
+c. Specialization
+Question 7
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Authority moves _______, while accountability move________ within the organization.
+Select one:
+a. downward, upward
+b. upward, literally
+c. upward, downward
+Question 8
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+What is the term used to define the number of subordinates directly controlled by a manager?
+Select one:
+a. Span of management
+b. Division structure
+c. Investment span
+Question 9
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Delegation is one-sided relationship.
+Select one:
+a. True
+b. False
+Question 10
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Which of the following is incorrect?
+Select one:
+a. Planning is the part of the management process that attempts to define the organization's future.
+b. Planning is a one-time event.
+c. The approach to planning can differ greatly from manager to manager.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#match-the-items-in-column-a-with-the-items-in-column-b-write-your-answer-on-the-space-provided-a____1-its-task-is-the-final-acceptance-to-hire-an-employee-____2-all-informa">12.
+                                            Match the items in Column A with the items in Column B. Write your answer on the space provided.	A										____1. Its task is the final acceptance to hire an employee	.		           ____2. All information and results of the tests of the applicant is	 assessed in this stage.____3. This commonly reveals the applicant’s emotional maturity.	____4. In this stage the applicant is offered the job and undergoes	orientation and induction programs.____5. This is the familiarization of the required skills for a particular work____6. Directive interviews that promote equal opportunity for all applicants.	  ____7. It determines the selection procedure on how to hire the most qualified applicant for the specific job.____8. It assesses the personal traits such as the physical appearance, rooming	         and qualities like trainings and educational background of the applicants.____9. It screens physical capabilities of the Executive/ Manager applicants in 	the job.___ 10. It is contributory factors in assessing the applicant’s perseverance and consistency to apply for the job.		Ba. 	Placementb. 	In- dept interviewc. Physical examinationd. Personality teste. Preliminary screeningf. Operatingg. Structuredh. Aptitude testi. Apprenticeshipj. Human resource​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#multiple-choice-test-choose-the-best-answer1-structures-in-the-living-world-are-organized-in-hierarchical-levels-the-cellular-level-serves-to-be-the-lowest-what-level-is-next-to-cellular-levela">13.
+                                            Multiple choice test. Choose the best answer
+1.Structures in the living world are organized in hierarchical levels. The cellular level serves to be the lowest. What level is next to cellular level?
+a. cell
+b. organ
+c. tissue
+d. system
+2.Which of the following describes the apoptosis?
+a. Programmed G0 phase
+b. Programmed division
+c. Programmed death
+d. Apoptosis pertains to the abnormal multiplication due to the mutation in B-globin gene in 11th chromosome
+3.Which statement is true?
+a.All cells enter the G0 phase.
+b. All cells in the G0 phase will eventually die.
+c. G0 phase is also the programmed cell death.
+d. Cancer cells have defective checkpoints and programmed cell death.
+4.Which of the following is NOT a component of cell theory?
+a.All living things are composed of one or more cells.
+b.Cell is the basic unit of life.
+c.All cells are membrane bound.
+d.All cells came from pre-existing cells.
+5.How do cells arise from pre-existing cells?
+a.through reproduction
+b.through metabolism
+c.through adaptation
+d.through growth and reproduction
+6.Cell membranes are constructed mainly of _________________________
+a. lipid bilayer
+b. calcium ions
+c. protein pump
+d. carbohydrate gates
+7.Which of the following statements is always TRUE?
+a. All cells have cell wall.
+b. All cells contain a chloroplast.
+c. All cells contain nucleus.
+d. All cells have cell membrane.
+8.What do you call the folds in the intestine?
+a. Ruggae
+b. Villi
+c. Microvilli
+d. Cilliated layer
+9.I am a cell that entered interphase. Currently, my DNA undergoes replication. In what phase am I right now?
+a. G1 phase
+b. S phase
+c. G2 phase
+d. Mitotic phase
+10. Which characteristic of the cell membrane is described as the capacity to regulate what goes in and out of the cell?
+a. high permeability
+b. permeability
+c. selective permeability
+d. none permeability </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#posttest-read-the-statements-carefully-write-the-letter-of-the-best-answer-before-each-number-1-which-best-characterizes-qualitative-researcha-it-has-small-sample-sizec-it-uses-rating-scale-in-d">14.
+                                            POSTTEST. Read the statements carefully. Write the letter of the best answer before each number.1. Which BEST characterizes qualitative research?A. It has small sample sizeC. It uses rating scale in data gatheringB. It generates statistical dataD. It focuses on specific variables to study2. Which BEST describes quantitative research?A. It uses structured instrumentC. It creates a new hypothesis and theoryB. It generates open-ended responsesD. It provides results which are generalizable3. What research type arrives at a narrative report rather than statistical report?A. descriptiveB. experimental C. qualitativeD. quantitative4. What research type gathers data in the form of images and words rather than numbers?A exploratoryB. narrativeC. quantitativeD. qualitative5. Which research can be categorized under humanities and social sciences?A. Effectiveness of Warm-Up exercises for HikersB. Sweetened Ampalaya: An Innovative Product for DiabeticsC. Assessment of the Accuracy of Waze in Searching for LocationD. Relationship between Gender and Leadership Qualities of Grade 11 students: Basis for Gender anEquality Program6. This term means the standards which identify what is acceptable and unacceptable in conductingresearch?A. NormsB. StandardsC. Research ethics D.Ethical considerati7. What does anonymity mean in research writing?A. The respondent's identity is not revealed.C.B. The respondents know who are being studied.C. The respondents are fully aware that they are being studied.D. The respondents do not allow the researcher to take photos and videos8. How does a researcher observe justice in a research?A. The researcher conducts a study which benefits the society.B. The researcher protects personal information of respondents.C. The researcher observes unbiased selection process of respondents.D. The researcher gets the approval of the respondents before proceeding to the study.9. Which of these demonstrate integrity of the research?A. The researcher uses correct and accurate information.B. The researcher writes to the owner of ideas he/she used in the paper.C. The researcher reads thoroughly related literature and puts them on the paper.D. The researcher submits the intellectual property of fellow researchers.10. Which of the following can be considered unethical action?A. Informing the respondents on the true purpose of the study.B. Asking permission to record the interview from the respondentC. Studying the respondents or research subjects with their knowledgeD. Asking a respondent questions that cause him or her extreme embarrassment.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#activity-1-write-true-if-the-statement-is-correct-otherwise-write-false-write-the-answer-on-your-answer-sheet-___________1-every-change-you-make-to-your-bios-structure-is-saved-on-cmos-___________2">15.
+                                            ACTIVITY 1. Write TRUE if the statement is correct otherwise write FALSE. Write the answer on your answer sheet.___________1. Every change you make to your BIOS structure is saved on CMOS.___________2. POST is an acronym for the Power-On Software Test.___________3. BIOS drivers are the many programs stored in your computer’s memory chips.___________4. Windows 10 uses UEFI system.___________5. Newer PCs have replaced the bootstrap loader with an EFI.___________6. CMOS is an acronym for Complementary Meta-Oxide Semiconductor.___________7. The last step in activating BIOS in Windows 10 is selecting 'UEFI Firmware Settings.'___________8. You can change the boot order of the devices under BIOS.___________9. BIOS will not load under windows 7 if you did not press the BIOS hotkey upon opening your PC.___________10. Oftentimes your computer will indicate on the startup screen which key or keys need to be pressed in order to enter BIOS settings.ACTIVITY 2: IdentificationSelect the answer in the box below and write the answer in your answer sheet.__________1. It tests the hardware of your PC and ensures that there is nothing out of order and no errors present with your operating system.__________2. It contain a number of hardware configuration options that can be changed through the setup utility.__________3. It’s the successor to the traditional BIOS. UEFI offers support for boot volumes over 2 TB in size__________4. It is a term that pertains to the way a system is set up.__________5. It is tasked with reading your PC’s hard drive boot sector to move along the complete operating system load.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-the-structural-planning-of-roles-to-implement-necessary-functions-2-program-strategies-are-laid-out-to-achieve-the-desired-outcome-3-the-recruitment-selection-and-retention-of-members-wherein-t">16.
+                                            1. The structural planning of roles to implement necessary functions.2. Program strategies are laid out to achieve the desired outcome.3. The recruitment, selection, and retention of members wherein they are givenan appropriate assignment with proper training and professionaldevelopment.4. It directs the organization to motivate and empower individuals in carryingout the program.5. It deals with tasks and accountabilities to accomplish the objectivesthrough cooperation.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#directions-find-the-answer-to-the-questions-in-the-word-search-puzzle-1-the-if-selection-statement-is-a___________because-it-selects-or-ignores-asingle-action-or-as-well-soon-see-a-single-group">17.
+                                            Directions: Find the answer to the questions in the word search puzzle.1. The if selection statement is a___________because it selects or ignores asingle action (or, as we'll soon see, a single group of actions2. The if...else statement is called a _________because it selects between twodifferent actions (or groups of actions).3.________As name refers instructions are executed in the sequence inwhich they are written in the program.4.___________A structure which select which statement or block ofstatements will execute on the basis of our programming logic.5.___________a keyword with any uppercase letters is a syntax error.pahelp PO rate ko PO excellent ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#helpppp%e2%80%bc%ef%b8%8f%e2%80%bc%ef%b8%8f1-what-term-refers-to-a-set-of-activities-designed-to-attract-qualified-applicants-b-recruitment-c-selection-d-training-2-attracting-applicants-from-out">18.
+                                            HELPPPP‼️‼️1. What term refers to a set of activities designed to attract qualified applicants B. Recruitment C. Selection D. Training 2. Attracting applicants from outside the organization for a job vacancy is called_recruitment. A External B. Internal C. Structured D. Unstructured 3. What staffing process involves choosing qualified applicants to fill job vacancies? A. Development B. Recruitment C. Selection D. Training measure the 4. Which of the following employment tests is designed to applicant's cognitive ability and decision-making skills? A. Intelligence Test B. Personality Test C. Psychological Test D. Trade Test 5. What selection process involves question and answer to obtain applicant's information? A Interview B. Job Analysis C. Notification D. Orientation 6. What do you call an rganized activity or learning conducted to improve employee performance? A. Feedback B. Motivationc. Skill D. Training 7. Which of the following is a series of short hours training? A. Distributed Learning B. Massed Learning C. OJT D. OTJ 8. The following are learning principles to be considered in designing training programs EXCEPT A. Individual Differences B. Modeling C. Position D. Reinforcement 9. Who among the following employees basically needs apprenticeship training program? B. Newly hired C. Newly promoted D. Poor performance A. Expert 10. Which of the following is best to employ when a supervisor is given a development program and training which should be done away from his workplace? A. Coaching B. Job Rotation c. Mentoring D. Scholarship Program​ help me plss​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#performance-tasktransfer-goal-students-will-be-able-to-independently-use-their-learning-to-engage-in-activitiesthat-promote-proper-nutrition-and-healthful-habits-in-order-to-maintain-proper-function">19.
+                                            Performance Task:TRANSFER GOAL: Students will be able to independently use their learning to engage in activitiesthat promote proper nutrition and healthful habits in order to maintain proper function of the organsystems.Deadline: February 28, 2022Engaging Scenario:The World Health Organization (WHO) and the Department of Health (DOH) recentlyannounced their desire to enlist the help of volunteers for a nationwide project aimed at decreasingthe rate of malnutrition in the country. You are a youth volunteer to help conduct a growth monitoringprogram and supplementary feeding program in schools within your community to support the project.You will form a group of volunteers who will facilitate “Operation Timbang: to identify which schoolhas the highest rate of malnutrition cases. This will serve as the indicator on how you will performyour mission to decrease malnutrition cases in the location. You will also be calling for the students’parents to educate them about the proper nutrition appropriate to their financial status.As part of the initial phase of the mission, your volunteer group is tasked to write a proposal ofhow you can attain the objectives parallel to the goals of WHO and DOH to decrease malnutritioncases. Knowing the demographics of the prospective schools, prepare a proposal that should suitchildren aged 5-12 and their parents or guardians. Your plan of action should include the following: an estimate of the nutritional requirements of children with malnutrition, a recommendation to improve dietary management of malnutrition, a seminar for parents on the importance of providing good food to their children, andpresentation approach on how the different organ systems work and interact to carry outessential body processes and how malnutrition can affect these body processes.Your proposal will be reviewed and evaluated by selected personnel from WHO and DOHbased on content, organization, quality, spelling and grammar, originality, and timeliness.Write your proposal in a 8.5’x13” file or long bond paper. Include with a cover page andtable of contents. Save your documents in a pdf form.RUBRICSCONTENTThe plan of action contains comprehensive and clear details of steps, withfocus on dietary management and seminar for parents. The output includescover page and table of contents.30%ORGANIZATIONThe ideas and information are logically and coherently structured. The paperfollows the problem solution-justification form. It is also saved in a pdf format.25%QUALITY AND ORIGINALITYTone is very persuasive and interesting. Output is unique and is not similar toanother output. Plagiarism is not detected25%SPELLING AND GRAMMARSpelling and grammar are correct10%TIMELINESSPerformance task is submitted on time. A deduction will be given per day forlate submission.10%TOTAL 100%​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#b-table-c-place-holder-d-text-box-6-it-is-the-product-of-the-graphic-arts-especially-commercial-design-or-illustration-a-message-b-graphics-c-verification-d-text-7-it-allows-users-to-add-eff">20.
+                                            b. Table c. Place Holder d. Text Box 6. It is the product of the graphic arts, especially commercial design or illustration a. Message b. Graphics c. Verification d. text 7. It allows users to add effects to text or images in a slide. a. PowerPoint Animation b. Slideshow c. Audio File d. Video 8. This are tools used to make any presentation interesting and exciting. a. audio and video b. animations c. hyperlinks d. text and graphics 9. It is a program software package used to display information in form of a slide show. a. animations b. hyperlinks c. multimedia presentation d. navigation structure 10. is a sequence of effects to your slides which content gives the illusion of continuous motion when rapidly displayed one after the other. a. hyperlinks b. animations c. text and graphics d. audio and video 11. It is a link from a hypertext file or document to another location or file, typically activated by clicking on a highlighted word or image on the screen. a navigation structure b. animation c. hyperlinks d. photos 12. Where can we find and select the picture file you want to insert picture or graphic? a. in Home window b. In the Insert Picture window c. File menu d. In transition​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#19-in-events-what-do-you-call-groups-of-people-who-will-participate-in-the-event-a-organizers-c-participants-d-teachers-b-learners-20-this-pertains-to-the-main-reason-why-an-event-like-dance-e">21.
+                                            19. In events, what do you call groups of people who will participate in the event? A. Organizers C. Participants D. Teachers B. Learners 20. This pertains to the main reason why an event like dance event must pursue. A. Cause B. Participants C. Fund D D. Awards 21. Due to the pandemic health restrictions, where can you best participate in a dance event? A. Online B. School C. Barangay Hall D. Outside 22. Which of the following is the best benefit of dancing? A. Entertainment B. To document C. Showcase talent D. Fitness 23.The purpose of pacing in dance exercise is A. to regulate daily activities. B. to structure an increase in tolerance through gradually increased activity. C. to break an activity up into active and rest periods. D. to increase in pain levels. 24. Dance events allow you to develop your social skills. *Management is a structural planning of roles to implement necessary functions. A. Only the first statement is correct. C. Both statements are correct. D. Both statements are wrong. B. Only the second statement is correct. 25. *Decisions of venue and location must relate back to the dance events dance facilities. *The location is the actual site of the event, which could be an existing event venue or A. Only the first statement is correct. C. Both statements are correct. D. Both statements are wrong. B. Only the second statement is correct. 26. *Target audience, venue availability, market characteristics and event organizers suitable objective of the dance event. *Decisions about when to stage it may or may not be an option, as they may be of factors. A. Only the first statement is correct. C. Both statements are com D. Both statements are wrong B. Only the second statement is correct. 27*There must be continual reference back to the aims and objectives of the dance event *Audience requires a detailed consideration of the dance event target market A. Only the first statement is correct. C. Both statements are correct. D. Both statements are wrong. B. Only the second statement is correct. 28. *The total development of an individual in terms of management is centered on a philosophically sound program structure and activities flexoffice Black el site. C. Both statements are correct. D. Both statements are wrong. ces help define an external set *Management requires harmonious effort amongst members to fulfill the target objective. A. Only the first statement is correct. C. Both statements are correct. D. Both statements are wrong. B. Only the second statement is correct. 29. *Planning aids in developing a group structure with definite scope of work for every member. *Staffing includes decision-making, communication, selection of people, and enhancing the performance of individuals. A. Only the first statement is correct. C. Both statements are correct. D. Both statements are wrong. B. Only the second statement is correct. 30. *Management gives a grasp and value to the essential ideals of the field's discipline. *Organization provides guidelines in the collaborative strengths of people. A. Only the first statement is correct. C. Both statements are correct. D. Both statements are wrong. B. Only the second statement is correct. 31. *Decision-making, communication, selection of people, and enhancing the performance of individuals is a function of organization and management. *Each event is different in its nature, the process of planning &amp; execution of each event differs on basis of type of dance event. A. Only the first statement is correct. C. Both statements are correct. D. Both statements are wrong. B. Only the second statement is correct. 32. *Instilling good relations contributes to the success of the event organizer such as programming. *Correct balance of activities to meet the needs of all the different stakeholders in the dance event should be considered. A. Only the first statement is correct. B. Only the second statement is correct.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#direction-instruction-read-and-understand-the-selections-provided-below-then-show-your-reaction-in-2-3-sentences-to-some-issues-presented-manila-philippines-%e2%80%94-%e2%80%9cundernutrition-is">22.
+                                            Direction / instruction: read and understand the selections  provided below then show your reaction in 2-3 sentences to some issues presented. MANILA, Philippines — “Undernutrition is the single greatest threat to a child’s life.”Dr Martin Parreño, National Program Officer of the World Food Programme-Philippines, called on Filipinos to pay more attention to child malnutrition at all times — with or without disasters.Latest statistics from the National Nutrition Council (NNC) showed that 67% of Filipino families are not eating enough even when there are no calamities.In the Philippines, malnutrition is seen across all age groups — from infancy to adulthood, the 2013 National Nutrition Survey revealed.“At the center of malnutrition’s underlying causes is inadequate childcare and feeding practices,” Parreño added. “And we don’t have a structure curriculum addressing this,” he said during the 2014 Dr Juan Salcedo Memorial Lecture organized by the Nutrition Foundation of the Philippines (NFP) on Thursday, October 9.Children who grew up in homes where parents did not care or invest in proper food and hygiene will most likely grow up to become the same kind of parents, hence perpetuating the cycle.The Department of Education has been working on integrating health and nutrition lessons in school curricula. More recent strategies also try to involve parents in classes and school-based supplementary feeding programs.Such efforts, however, will remain fruitless unless more parents realize the value of nutrition and their roles as primary caregivers.​comprehension questions:1. what is the main issue presented?2. as cited, what is the underlying cause of this problem?3.how can we solve malnutrition problem in the Philippines?4. do you agree that children who grew up in homes where parents did not care or invest proper food and hygiene will mostly become the same kind of parents in the future? why or why not?5. what can you say on the DepEd's plan to integrate health and nutrition lesson in school curricula? do you think it is beneficial ?6. explain whenever you agree or disagree with the author's of opinion about malnutrition?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#musical-composition-music-composition-or-simply-composition-can-refer-to-an-original-piece-or-work-of-music1-either-vocal-or-instrumental-the-structure-of-a-musical-piece-or-to-the-process-of-cr">23.
+                                            Musical composition, music composition or simply composition, can refer to an original piece or work of music,[1] either vocal or instrumental, the structure of a musical piece or to the process of creating or writing a new piece of music. People who create new compositions are called composers. Composers of primarily songs are usually called songwriters;[2][3] with songs, the person who writes lyrics for a song is the lyricist. In many cultures, including Western classical music, the act of composing typically includes the creation of music notation, such as a sheet music "score," which is then performed by the composer or by other musicians. In popular music and traditional music, songwriting may involve the creation of a basic outline of the song, called the lead sheet, which sets out the melody, lyrics and chord progression. In classical music, orchestration (choosing the instruments of a large music ensemble such as an orchestra which will play the different parts of music, such as the melody, accompaniment, countermelody, bassline and so on) is typically done by the composer, but in musical theatre and in pop music, songwriters may hire an arranger to do the orchestration. In some cases, a pop or traditional songwriter may not use written notation at all and instead compose the song in their mind and then play, sing or record it from memory. In jazz and popular music, notable sound recordings by influential performers are given the weight that written or printed scores play in classical music.
+Although a musical composition often uses musical notation and has a single author, this is not always the case. A work of music can have multiple composers, which often occurs in popular music when all members of a band collaborate to write a song or in musical theatre, when one person writes the melodies, a second person writes the lyrics and a third person orchestrates the songs.
+A piece of music can also be composed with words, images or, since the 20th century, with computer programs that explain or notate how the singer or musician should create musical sounds. Examples range from 20th century avant-garde music that uses graphic notation, to text compositions such as Karlheinz Stockhausen's Aus den sieben Tagen, to computer programs that select sounds for musical pieces. Music that makes heavy use of randomness and chance is called aleatoric music and is associated with contemporary composers active in the 20th century, such as John Cage, Morton Feldman and Witold Lutosławski. A more commonly known example of chance-based, or indeterminate, music is the sound of wind chimes jingling in a breeze. The study of composition has traditionally been dominated by examination of methods and practice of Western classical music, but the definition of composition is broad enough to include the creation of popular music and traditional music songs and instrumental pieces, and to include spontaneously improvised works like those of free jazz performers and African percussionists such as Ewe drummers.
+In the 2000s, composition is considered to consist of the manipulation of each aspect of music (harmony, melody, form, rhythm and timbre), according to Jean-Benjamin de Laborde (1780, 2:12):
+Composition consists in two things only. The first is the ordering and disposing of several sounds...in such a manner that their succession pleases the ear. This is what the Ancients called melody. The second is the rendering audible of two or more simultaneous sounds in such a manner that their combination is pleasant. This is what we call harmony and it alone merits the name of composition.
+answer ng maayus or pwede ka ma ban</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#4-across-1-sql-stands-for-query-language-2-example-of-a-logical-connective-3-an-sql-command-included-in-the-ddl-4-an-sql-command-used-to-add-records-in-a-table-5-an-sql-command-classification-that">24.
+                                            4 Across 1. SQL stands for Query Language 2. Example of a logical connective 3 An SQL command included in the DDL 4. An SQL command used to add records in a table 5. An SQL command classification that includes GRANT and REVOKE 6. Operator that is used in a WHERE a clause to search for a specific pattern in a field 7. A DCL command that is used to remove all previously granted privileges 8. A clause in the SELECT command that specifies the conditions the records must satisfy 9. A flexible language that is used to communicate with a relational database such as MariaDB 10. A DML command used to display records Down 1. Adatabase interface that allows Java programs to access a database % is an example of a A DCL command used to give others privileges to access a database is an inquiry into the database using the SELECT statement in order to extract data from the database 5. ADML command used to remove both structure and data of a table or database 6. Example of a logical connective 7. The UPDATE command is used to a record of a table 8. MariaDB Connector/) is an example of a JDBC 9. DCL stand for Data Language 10. A DML command used to remove records from a table​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#3-complete-the-following-statements-by-choosing-the-correct-answers-from-the-box-write-your-answer-onthe-space-before-the-number-trainingplacementdevelopmentinterviewstructured-interview-massedselec">25.
+                                            3. complete the following statements by choosing the correct answers from the box. Write your answer onthe space before the number.TRAININGPLACEMENTDEVELOPMENTINTERVIEWSTRUCTURED INTERVIEW MASSEDSELECTIONTRAINING NEEDSDISTRIBUTEDRECRUITMENTEVALUATING THE TRAINING PROGRAM1. The positive effects of the implemented training program may be seen byassessing the participants' reactions, their acquired learnings and their behavior after completing thetraining. This process is called2is done to gauge or measure the applicant's ability to do the job.3. When the interviewer has a prepared question for the interviewee, the jobinterview is said to be a4. A type of training where it is programmed to be accomplished in five days at fourhours per day is calledtraining5. When the organization prepares its employees for a specific career goal, it iscalled human resource6. It is a set of activities designed to attract qualified applicants for job positionvacancies.7. The type of training where it is conducted in either few or long hours is calledtraining8. It is the specific areas for the improvement of knowledge and skills of humanresources.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#the-future-gender-equality-robert-grant-the-future-gender-equality-recruiters-are-key-to-gender-solution-says-robert-grant-recruiters-know-about-hiring-but-they-could-and-arguably-should-be-more">26.
+                                            "The Future Gender Equality" Robert Grant The future Gender equality Recruiters are key to gender solution, says Robert Grant Recruiters know about hiring, but they could- and arguably should be more influential to businesses around issues of gender equality. But this comes with responsibility and the need for any chosen recruiter to prioritise diversity as a business objective. Monitoring diversity means recruiters can address discrepancies. For example, equally qualified and sometimes more qualified women are not equally hired. Women's tenure is higher in banks than for men and fewer women are employed in the digital industry. To stay competitive, businesses must encourage hiring managers to understand the implications of these trends and should work in partnership with recruiters. Only by investing in good programs can recruiters properly support clients. IT systems that allow monitoring of all relevant diversity across both the internal employee and candidate recruitment lifecycle are now critical to good quality intelligence. Staff should be expected to work to inclusion guiding principles, but businesses need support systems in place and investment in on-going development on the value of diversity to the business. In 2013 Cititec is developing its people in strengths-based leadership. The next step is to use the strengths-based approach in recruitment. cititec man recruitment for a technical w Communicating transparency, especially in equal pay and flexible working, are critical. "Early in 2013 we launched a new Flexible Working Policy. Some of the barriers highlighted during the consultation period helped avoid ill feeling from people who may cover for their colleagues and for non-careers who sometimes feel their needs are overlooked. Now anyone can ask for flexible working and new IT systems mean we have the ability to support them," explains Cititec's CEO Stephen Grant. "Consequently there has been an increase of 33 per cent in senior women employed so far." Later in the year Cititec and Sateo, a specialist equality consultancy, will Citite Development launch Program. Aimed at internal staff, candidates, and clients, the program will bring men and women together to develop key leadership skills based on the strengths finder model. Only by recruiters investing in equality and working in partnership with clients, can issues around gender be explored alongside a problem solving approach. True gender equality can therefore start to be realized, and recruiters are the key to the solution. Directions: Read carefully the article, "The Future Gender Equality". Respond to the article by writing an essay in selecting the following concepts below. (Select only one concept). Use the Three-part structure you have leamed in the lesson. Write your response to the article in the worksheet provided. 1. Gender Stereotyping in the Society 2. Women Empowerment in the Philippines 3. No Gender: The New Leaderplss sAna bilisan​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#identify-what-is-asked-in-the-following-statement-______________1-it-is-the-study-of-animals-______________2-it-is-the-change-in-the-genetic-make-up-of-populations-of-organism-over-time-_________">27.
+                                            Identify what is asked in the following statement. ______________1. It is the study of animals. ______________2. It is the change in the genetic make-up of populations of organism over time. ______________3. It is a global overpopulation which is rooted on a virtually environmental problems. ______________4. It is an understanding of basic ecological principles that can help prevent ecological disasters. ______________ 5. It is a process that does not need cell energy. ______________6. It is a carrier protein in a plasma membrane that temporarily bind with molecules. ______________7. Water molecules that diffuse across selectively permeable membranes from areas of higher concentration to areas of lower concentration. ______________8. It is essentially protein-free plasma that moves across capillary walls due to a pressure gradient across the wall. ______________ 9. It is a specific carrier protein in the plasma that membrane bind with molecules. ______________10. It is a bulk movement of material into a cell by the formation of a vesicle. ______________11. A term for a plasma membrane that encloses small amounts of fluid droplets and takes them into the cell. ______________12. It is a plasma membrane that forms a vesicle around a solid particle. ______________13. It is the extracellular molecules that bind with specific receptor protein on a plasma membrane, causing the membrane to invaginate and draw molecules into the cell. ______________14. It is a bulk movement of materials out of a cell. ______________15. It forms basal body of cilia and flagella functions in mitotic spindle formation. ______________16. It traps, transforms, and uses light energy to convert carbon dioxide and water into glucose and oxygen. ______________17. It is a structure of a cell that controls heredity and cellular activities. ______________18. It moves small particles past fixed cells and is a major form of locomotion in some cells. ______________19. It is a structure of a cell that dissolves substance, houses organelles and vesicles. ______________ 20. It assists in cell movement; provides support and site for binding of specific enzymes. ______________ 21. It is a structure of a cell that houses organelles and serves as fluid medium for metabolic reactions. ______________22. It functions as a storage and internal transport. ______________23. It carries signals to distant parts of an animal’s body. ______________24. It is a cell function that sorts, packages, and routes cell’s synthesized products. ______________25. It is a cell function that digest materials. ______________26. It isolates particular chemical activities from the rest of the cell. ______________27. It gives structural support and assist in cell movement. ______________28. It assists in movement of cilia, flagella, and chromosomes; transport system. ______________29. It is the dense site in the cytoplasm that gives rise to large numbers of microtubules with different functions in the cytoskeleton. ______________30. It converts energy into a form the cell can use. ______________31. It is a cell structure that preassembles the point for ribosomes. ______________32. It contains DNA that controls cell’s genetic program and metabolic activities. ______________33. It is a cell structure that regulates movement of materials. ______________34. Is the site of cell function for protein synthesis. ______________35. It is the storage site of food and other compounds; also pumps water out of a cell. ______________36. It is a cell structure believed to transport messenger RNA from the nucleus to the ribosomes. ______________37. It is a site of intracellular digestion, storage or transport. ______________38. It consists of a single layer of tightly packed, flatted disked-shaped cells. ______________39. It consists of a single layer of tightly packed, cube shaped cells. ______________ 40. It consists of a single layer of elongated cells.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#14-which-of-the-following-is-not-included-on-the-network-devicea-modemsc-routersb-keyboardsd-network-connections15-it-is-an-electronic-device-for-storing-and-processing-data-typically-in-binar">28.
+                                            14. Which of the following is NOT included on the network device?A. ModemsC. RoutersB. KeyboardsD. Network Connections15. It is an electronic device for storing and processing data, typically in binary form. According toinstructions given to it in a variable program.A. Operating systemC. ComputerB. NetworkD. Windows16. It is a boot configuration utility that allows you to set the programs that will run at startup and toedit the files configurationA. Microsoft system ConfigurationC. Windows ConfigurationB. System Configuration UtilityD. Network Configuration17. It starts windows with basic services and drivers and the other services and (drivers only) startupprograms thatyouselect.A. Normal startupC. selective settingsB. Diagnostic startupD. General startup18. Which among the following is not included on the five functional tabs of system Configuration utility?A. GeneralC. servicesB. BootD. error19. It is the default tab in the system configuration and shows how the computer will start, by defaultnormal startup should be selected.A. GeneralC. BootB. TabD, services20. It allows you to enable or disable any of the Microsoft Windows services or other program servicesrunning on the computer.A. GeneralC. BootB. TabD. services21. It provides a convenient list of diagnostic tools and other advanced tools that you can run.A. GeneralC. ToolsB. BootsD. services22. It has a hierarchical structure like the directions on your hard disk.A. RegistryC. Control Panel AppletsD. Register Edit​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#a-shopping-mall-offers-discounts-to-its-customers-if-the-amount-of-purchase-is-greater-than-php-5000-00-a-20-discount-will-be-given-design-an-algorithm-using-a-selection-structure-for-a-program-tha">29.
+                                            A shopping mall offers discounts to its customers. If the amount of purchase is greater than Php 5000.00, a 20% discount will be given. Design an algorithm using a selection structure for a program that will compute the amount of the discount and the total amount to be paid by a customer.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-social-welfare-agencies-are-also-social-systems-in-view-of-their-being-a-subjected-to-pressures-from-outside-and-within-the-organization-b-established-to-attain-specific-goals-have-internal-stru">30.
+                                            1. Social welfare agencies are also social systems in view of their being a. Subjected to pressures from outside and within the organization b. Established to attain specific goals, have internal structures, procedures. c. Made up of various levels of staff, volunteers and management d. Created by law and supported by taxes and the public 2. Government agencies are examples of a bureaucratic form or organization due a. To standard operating procedures observed during transactions. b. To nepotism, red tape and corruption c. To a short chain of command d. Efficiency and effectiveness of its program/ services 10. One of the functions of social work administration is a. Organizing of social welfare agency b. Identify social needs and social welfare programs to address these aceda c Directing the allocation of resources for specific programs/ services d. Recruitment, selection, and hiring social work persoanel in an agency​</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="what-are-the-different-selection-structure-in-the-c-program-language">
+                            1. what are the different selection structure in the c program language</h2><br />
+                        <p>Also known as a conditional structure, a selection structure is <strong>a programming feature that performs different processes based on whether a boolean condition is true or false.</strong> Selection structures use relational operators to test conditions.</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="differentiate-between-sequential-and-selection-when-it-comes-to-program-structure">
+                            2. Differentiate between Sequential and Selection when it comes to Program Structure.</h2><br />
+                        <p><strong>Answer:</strong></p><p>Sequence control structure executes the statements one by one in consecutive order. It refers to the linear execution of a code within a programme. Selection control structure enables a programme to execute different statements for different conditions. ... Execute statement one by one in linear or consecutive order.
+</p><p></p><p><strong>Explanation:</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="programming-plateselect-a-mathematical-method-below1-bairstows-method2-secant-methodlook-for-an-appropriate-equation-for-the-method-you-selected-look-for-references-or-articles-related-to-the">
+                            3. Programming Plate
+Select a Mathematical Method below:
+1. Bairstows Method
+2. Secant Method
+Look for an appropriate equation for the method you selected. Look for references or articles related to the problem.
+Requirements for the program:
+The following structures should be evident:
+1. looping structure
+2. conditional structure
+3. array
+4. return type and void type functions</h2><br />
+                        <p>Programming Plate</p><p>Select a Mathematical Method below:</p><p>1. Bairstows Method</p><p>2. Secant Method</p><p></p><p>Look for an appropriate equation for the method you selected. Look for references or articles related to the problem.</p><p></p><p>Requirements for the program:</p><p>The following structures should be evident:</p><p>1. looping structure</p><p>2. conditional structure</p><p>3. array</p><p>4. return type and void type functions</p><br />
+                                            <h2 class="ez-toc-section" id="in-weebly-the-is-first-page-that-you-will-see-after-you-log-in-answer-question-2-answer-saved-marked-out-of-1-00-not-flaggedflag-question-question-text-which-of-the-following-can-be-used-to-m">
+                            4. In Weebly, the ( ) is first page that you will see after you log in. Answer:  Question 2 Answer saved Marked out of 1.00  Not flaggedFlag question Question text Which of the following can be used to make presentations? Select one: a. Weebly b. Google Sheets c. Prezi d. WordPress Question 3 Answer saved Marked out of 1.00  Not flaggedFlag question Question text _____ is an open source web application created by volunteer engineers from Google for disaster response purposes Select one: a. Person Finder b. Safety Check c. Google Earth d. Change.org Question 4 Answer saved Marked out of 1.00  Not flaggedFlag question Question text _____ is a web-based presentation program. Select one: a. Wordpress b. Weebly c. LibreOffice d. Prezi Question 5 Not yet answered Marked out of 1.00  Not flaggedFlag question Question text In WordPress, a ( ) is a set of design elements such as font, colours and icons that work together to your blog a certain style. Answer:  Question 6 Not yet answered Marked out of 1.00  Not flaggedFlag question Question text In GIMP, the parts of the image that are isolated are called _____ Select one: a. compression b. vector c. selection d. resolution Question 7 Not yet answered Marked out of 1.00  Not flaggedFlag question Question text The ( ) mode is GIMP's default mode. Answer:  Question 8 Not yet answered Marked out of 1.00  Not flaggedFlag question Question text ( ) is an image format that can be greatly compressed, which makes it ideal for online use. Answer:  Question 9 Not yet answered Marked out of 1.00  Not flaggedFlag question Question text The traditional team structure, with a leader and members can be compared to which shape? Select one: a. Square b. Rectangle c. Triangle d. Circle Question 10 Not yet answered Marked out of 1.00  Not flaggedFlag question Question text Weebly is an example of software tools called Select one: a. Webpage creators b. Website manager c. Website builder d. Website management system</h2><br />
+                        In WordPress, a ( ) is a set of design elements such as font, colours and icons that work together to your blog a certain style.<br /><br />theme po <br />
+                                            <h2 class="ez-toc-section" id="1-this-organizational-design-has-a-few-departments-wide-spans-of-control-or-a-big-number-of-subordinates-directly-reporting-to-a-manager-has-a-centralized-authority-figure-and-has-very-little-form">
+                            5. 1. This organizational design has a few departments, wide spans of control, or a big number of subordinates directly reporting to a manager: has a centralized authority figure and has very little formalization of work: usually used by companies that start as entrepreneurial ventures.a. Simple Organization		b. Functional Organization 	c. Divisional Organization2. This organizational design is made up of workgroups or teams. They define team structures such as roles and responsibilities, and they collaboratively identify working arrangements that allow their team to deliver on their purpose and goals.a. Project Design Org. 		b. Team Design Org. 		c. Matrix-Project Design Org. 3. Which are not the basic nature of staffing (10 Pts)a. Pervasive Function		b. People-Oriented		c. Selection and Placementd. Human Objectives		e. Developing cordial working environmentf. Related to human being	g. Science as well as art		h. Manpower Planningi. Interdisciplinary in nature	j. Continous functions		k. Integral Part of General Management4. It is a set of activities designed to attract qualified applicants for job position vacancies in an organization.a. Advertising			b. Hiring			c. Recruitment5. Internal recruitment is a process of filling job vacancies through ___________________ of employees who are already part of the organization.a. Promotion and transfer	b. Internet recruiting		c. Private agencies6. It is a form of gift, prize, or recompense for merit, service, or achievement, which may have a motivating effect on the employee.a. grand prize			b. award			c. reward7. It includes recognition programs, being assigned to do rewarding jobs, or enjoying management support, ideal work environment, and convenient work hoursa. salary increase		b. vacation with pay		c. Nonfinancial compensation8. The degree to which someone is imaginative, artistically sensitive, and intellectual.a. Openness to Experience-	b. Extraversion			c. Emotional Stability-9. The theory indicates that people satisfy their needs in a specific order, from bottom to top.a. Maslov’s Theory		b. Masglow’s  Theory		c. Masslow’s Theory10. Which are the ways that can help in  elliminating communication barriers? (5pts)a. Defensiveness		b. Feedbacking			c. Simple Languaged. Roaming around		e. be emotional			f. acive lestining.pa help po​</h2><br />
+                        <p><strong>Answer:</strong></p><p>I know that you the answers to that question </p><br />
+                                            <h2 class="ez-toc-section" id="multiple-choice-choose-the-letter-of-the-best-answer-write-the-chosen-letteron-a-separate-sheet-of-paper-1-which-one-of-the-following-best-describes-the-product-development-process-a-the-strateg">
+                            6. Multiple Choice. Choose the letter of the best answer. Write the chosen letteron a separate sheet of paper. 1. Which one of the following best describes the product development process? A, the strategy process for original product B. work achieved by company's research and development department C. recognize opportunities in the marketplace, create and test products to take advantage of those opportunities, and then present the products to the market, a 2. Product development starts with A. Idea generation B. Idea selection C. Product Testing 3. The components of a product or service offer include: A. customer benefits, attributes or features, warranty, and potential benefits. B. core benefits, attributes or features, support and services, and potential C. core benefits, attributes or features, support and services, and customer loyalty programs. 4. A brand must offer which one of the following to have a value? A. Consistency B. Modest Product C. Multifaceted Product 5. What is a target audience? A. The people who will not buy your item B. The possible customers of your product C. The people who have no idea of your company 9. Designs are modified in order to A. Improve the product В. Increase income C. All of the above 10. What is the primary benefit of the coat? A. Brand B. Cost C. Warmth 11. Product development only contains the framework of new products A. True B. False 12. Product differentiation is the making of product modifications to convince the potential buyer to purchase the product A. True B. False 13. Companies strive on the basis of their products physical structures only. A. True B. False 14. Most first-hand products are commercial disappointments, A. True B. False 15. Product quality is mirrored in the product price customers are willing to pay: A True B. False​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. C</p><p>2. B</p><p>3. A</p><p>4. C</p><p>5. B</p><p>9. C</p><p>10. C</p><p>11. B</p><p>12. A</p><p>13. B</p><p>14. B</p><p>15. B</p><p><strong>Explanation:</strong></p><p> hope it helps;-)</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="1-an-attempt-to-predict-what-may-happen-in-the-future-a-setting-of-goalsc-benchmarkingb-forecastingd-contingency-planning2-when-alternatives-must-be-carefully-evaluated-by-the-decision-maker-at">
+                            7. 1. An attempt to predict what may happen in the future.A. Setting of goalsC. BenchmarkingB. ForecastingD. Contingency planning2. When alternatives must be carefully evaluated by the decision maker, at which step ofdecision-making process you are into?A. Identify the problemC. Analyze the AlternativesB. Develop AlternativesD. Select and Alternative3. Manager A encounters employee X and employee Y daily shortage on their sales for a straightweek. What do you think should Manager A do first in order to solve the problem?A. Identify the problemC. Fire the employees for incompetenceB. Develop AlternativesD. Ask for help in other employees4. It is a planning process that includes the people who will be affected by the plans and thosewho will be asked to implement them in all planning steps.A. Contingency PlanningC. BenchmarkingB. Scenario PlanningD. Participatory Planning5. Which statement best describes a Structured or Programmed Decision?A. A decision that is repetitive and can be handled using a routine approach.B. Described to be unique, non-recurring and need custom made decisions.C. Novel, unstructured decisions that are generally based on criteria that are not well-definedD. Information is more likely to be ambiguous or incomplete, and the decision maker mayneed to exercise some thoughtful judgment and creative thinking to reach a goodsolution.​</h2><br />
+                        <p><strong>Answer:</strong></p><p></p><p>1. Forecasting</p><p>2. Analyze the Alternatives</p><p>3. Indentify the problem</p><p>4. Participatory Planning</p><p>5. A decision that is repetitive...</p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="find-a-codeprogram-the-runs-the-basic-structure-1-program-each-you-can-install-coding-c-for-checking-and-compiling-the-codes-1-sequence2-selection3-looppls-answer-correctly">
+                            8. Find a code/program the runs the basic structure. (1 program each). You can install coding c++ for checking and compiling the codes.
+1. Sequence
+2. Selection
+3. Loop
+pls answer correctly</h2><br />
+                        <p><strong>Answer:</strong></p><p>[tex] \color{green}{ \rule{20pt}{5000000pt}}[/tex]</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="a-direction-read-the-sentences-below-carefully-fu-in-the-blanks-with-thecorrect-management-role-write-your-answer-in-your-notebook1-______a-lold-out-program-strategy-to-achieve-the-desired-outcome2">
+                            9. A. Direction: Read the sentences below carefully. Fu in the blanks with thecorrect management role.Write your answer in your notebook1.______a lold-out program strategy to achieve the desired outcome2.______is the recruitment, selection and retention of members wherein theyare given appropriate assignment with proper training and professionaldevelopment3______aids in developing a group structure with define scope of work forevery member.4._______ensures proper plon execution within the goals of the organization.5._______is directing the organization to motivate and empower individuals incarrying out the programB. Read the following sentences below carefully. Fill in the blanks with thequalities of a good leader.6._______competitiveness in thinking and logical reasoning: effective atimparting and applying knowledge.7________trustworthy of classified information: truthful. genuine, andcommitted to his/her words8._______for an uninterrupted flow in getting a demanding job done.9._______having an open mind and objectively evaluating circumstances.10.______sdccountable to task and handling of personnel9.​</h2><br />
+                        <p><strong>1</strong><strong>.</strong><strong>P</strong><strong>L</strong><strong>A</strong><strong>N</strong><strong>N</strong><strong>I</strong><strong>N</strong><strong>G</strong></p><p><strong>2</strong><strong>.</strong><strong>S</strong><strong>T</strong><strong>A</strong><strong>F</strong><strong>F</strong><strong>I</strong><strong>N</strong><strong>G</strong></p><p><strong>3</strong><strong>.</strong><strong>O</strong><strong>R</strong><strong>G</strong><strong>A</strong><strong>N</strong><strong>I</strong><strong>Z</strong><strong>I</strong><strong>N</strong><strong>G</strong></p><p><strong>4</strong><strong>.</strong><strong>C</strong><strong>O</strong><strong>N</strong><strong>T</strong><strong>R</strong><strong>O</strong><strong>L</strong><strong>L</strong><strong>I</strong><strong>N</strong><strong>G</strong></p><p><strong>5</strong><strong>.</strong><strong>L</strong><strong>E</strong><strong>A</strong><strong>D</strong><strong>I</strong><strong>N</strong><strong>G</strong></p><p><strong>6</strong><strong>.</strong></p><p><strong>7</strong><strong>.</strong><strong>I</strong><strong>N</strong><strong>T</strong><strong>E</strong><strong>G</strong><strong>R</strong><strong>I</strong><strong>T</strong><strong>Y</strong></p><p><strong>8</strong><strong>.</strong><strong>H</strong><strong>E</strong><strong>A</strong><strong>L</strong><strong>T</strong><strong>H</strong><strong>Y</strong><strong> </strong><strong>A</strong><strong>N</strong><strong>D</strong><strong> </strong><strong>F</strong><strong>I</strong><strong>T</strong></p><p><strong>9</strong><strong>.</strong><strong>A</strong><strong>D</strong><strong>M</strong><strong>I</strong><strong>N</strong><strong>I</strong><strong>S</strong><strong>T</strong><strong>R</strong><strong>A</strong><strong>T</strong><strong>I</strong><strong>V</strong><strong>E</strong><strong> </strong><strong>M</strong><strong>I</strong><strong>N</strong><strong>D</strong></p><p><strong>1</strong><strong>0</strong><strong>.</strong><strong>R</strong><strong>E</strong><strong>A</strong><strong>D</strong><strong>Y</strong><strong> </strong><strong>T</strong><strong>O</strong><strong> </strong><strong>T</strong><strong>A</strong><strong>K</strong><strong>E</strong><strong>N</strong><strong> </strong><strong>O</strong><strong>N</strong><strong> </strong><strong>R</strong><strong>E</strong><strong>S</strong><strong>P</strong><strong>O</strong><strong>N</strong><strong>S</strong><strong>I</strong><strong>B</strong><strong>L</strong><strong>E</strong></p><p></p><p>#PABRAINLIEST</p><p></p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="selection-structure-make-a-flowchart-or-pseudocode-that-depicts-the-logic-of-a-program-that-creates-a-random-number-and-then-asks-the-user-to-think-of-a-number-between-1-and-10-the-randomly-generate">
+                            10. Selection Structure. Make a flowchart or pseudocode that depicts the logic of a program that creates a random number and then asks the user to think of a number between 1 and 10. The randomly generated number will then be shown so that the user may check if he/she made the correct guess.​</h2><br />
+                        <p>fn main() {</p><p>  // start and endless loop</p><p>  loop {</p><p>    // await for user input</p><p>    let user_number = ask_user_with_prompt("Guess the number 1-10: ");</p><p>    // generate random number</p><p>    let random_number = generate_random_number(1..=10);</p><p>    // if the user guessed the random number</p><p>    if user_number == random_number {</p><p>      println!("You guessed the number! ");</p><p>      // break out on the endless loop</p><p>      break loop;</p><p>    }</p><p>    </p><p>    println!("Try again");</p><p>  }</p><p>}</p><br />
+                                            <h2 class="ez-toc-section" id="question-1not-yet-answeredmarked-out-of-1-00not-flaggedflag-questionquestion-textscientific-management-is-based-on-the-assumption-thatselect-onea-observation-would-reveal-the-workers-need-to">
+                            11. Question 1
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Scientific management is based on the assumption that:
+Select one:
+a. Observation would reveal the workers need to be multi-skilled.
+b. The scientific observation of people at work would reveal the one best way to do the task.
+c. Workers would receive a set wage regardless of performance.
+Question 2
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+It is the intentional structure of roles, in a formally organized enterprise.
+Select one:
+a. Informal organization
+b. Tall organization
+c. Flat organization
+d. Formal organization
+Question 3
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Benchmarking is one source of alternative solutions that is coming into wider use.
+Select one:
+True
+False
+Question 4
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+A company decision to diversify into new products and markets is an example of non-programmed decisions.
+Select one:
+True
+False
+Question 5
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+They spell out specific required actions or non-actions, allowing no discretion.
+Select one:
+a. Budgets
+b. Strategies
+c. Objectives
+d. Rules
+Question 6
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+The framework of interrelationships among individuals and departments that describe relationships of reporting and accountability is called:
+Select one:
+a. Organizational structure
+b. Span of control
+c. Specialization
+Question 7
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Authority moves _______, while accountability move________ within the organization.
+Select one:
+a. downward, upward
+b. upward, literally
+c. upward, downward
+Question 8
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+What is the term used to define the number of subordinates directly controlled by a manager?
+Select one:
+a. Span of management
+b. Division structure
+c. Investment span
+Question 9
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Delegation is one-sided relationship.
+Select one:
+a. True
+b. False
+Question 10
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Which of the following is incorrect?
+Select one:
+a. Planning is the part of the management process that attempts to define the organization's future.
+b. Planning is a one-time event.
+c. The approach to planning can differ greatly from manager to manager.</h2><br />
+                        planning is a one-time event<br />
+                                            <h2 class="ez-toc-section" id="match-the-items-in-column-a-with-the-items-in-column-b-write-your-answer-on-the-space-provided-a____1-its-task-is-the-final-acceptance-to-hire-an-employee-____2-all-informa">
+                            12. Match the items in Column A with the items in Column B. Write your answer on the space provided.	A										____1. Its task is the final acceptance to hire an employee	.		           ____2. All information and results of the tests of the applicant is	 assessed in this stage.____3. This commonly reveals the applicant’s emotional maturity.	____4. In this stage the applicant is offered the job and undergoes	orientation and induction programs.____5. This is the familiarization of the required skills for a particular work____6. Directive interviews that promote equal opportunity for all applicants.	  ____7. It determines the selection procedure on how to hire the most qualified applicant for the specific job.____8. It assesses the personal traits such as the physical appearance, rooming	         and qualities like trainings and educational background of the applicants.____9. It screens physical capabilities of the Executive/ Manager applicants in 	the job.___ 10. It is contributory factors in assessing the applicant’s perseverance and consistency to apply for the job.		Ba. 	Placementb. 	In- dept interviewc. Physical examinationd. Personality teste. Preliminary screeningf. Operatingg. Structuredh. Aptitude testi. Apprenticeshipj. Human resource​</h2><br />
+                        Answer:<p>1.B</p><p>2.D</p><p>3.C</p><p>4.F</p><p>5.J</p><p>6.A</p><p>7.E</p><p>8.I</p><p>9.G</p><p>10.H</p><br />
+                                            <h2 class="ez-toc-section" id="multiple-choice-test-choose-the-best-answer1-structures-in-the-living-world-are-organized-in-hierarchical-levels-the-cellular-level-serves-to-be-the-lowest-what-level-is-next-to-cellular-levela">
+                            13. Multiple choice test. Choose the best answer
+1.Structures in the living world are organized in hierarchical levels. The cellular level serves to be the lowest. What level is next to cellular level?
+a. cell
+b. organ
+c. tissue
+d. system
+2.Which of the following describes the apoptosis?
+a. Programmed G0 phase
+b. Programmed division
+c. Programmed death
+d. Apoptosis pertains to the abnormal multiplication due to the mutation in B-globin gene in 11th chromosome
+3.Which statement is true?
+a.All cells enter the G0 phase.
+b. All cells in the G0 phase will eventually die.
+c. G0 phase is also the programmed cell death.
+d. Cancer cells have defective checkpoints and programmed cell death.
+4.Which of the following is NOT a component of cell theory?
+a.All living things are composed of one or more cells.
+b.Cell is the basic unit of life.
+c.All cells are membrane bound.
+d.All cells came from pre-existing cells.
+5.How do cells arise from pre-existing cells?
+a.through reproduction
+b.through metabolism
+c.through adaptation
+d.through growth and reproduction
+6.Cell membranes are constructed mainly of _________________________
+a. lipid bilayer
+b. calcium ions
+c. protein pump
+d. carbohydrate gates
+7.Which of the following statements is always TRUE?
+a. All cells have cell wall.
+b. All cells contain a chloroplast.
+c. All cells contain nucleus.
+d. All cells have cell membrane.
+8.What do you call the folds in the intestine?
+a. Ruggae
+b. Villi
+c. Microvilli
+d. Cilliated layer
+9.I am a cell that entered interphase. Currently, my DNA undergoes replication. In what phase am I right now?
+a. G1 phase
+b. S phase
+c. G2 phase
+d. Mitotic phase
+10. Which characteristic of the cell membrane is described as the capacity to regulate what goes in and out of the cell?
+a. high permeability
+b. permeability
+c. selective permeability
+d. none permeability </h2><br />
+                        <p><strong>Answer:</strong></p><p>1. D. System</p><p><strong>Explanation:</strong></p><p>Hope it helps</p><p><strong>Answer:</strong></p><p>1.B</p><p>2.C</p><p>3.A</p><p>4.B</p><p>5. C</p><p>6.D</p><p>7.A</p><p>8.B</p><p>9.C</p><p>10.A</p><p></p><p><strong>Explanation:</strong></p><p>
+</p><p>I'm sorry, that's all I know</p><br />
+                                            <h2 class="ez-toc-section" id="posttest-read-the-statements-carefully-write-the-letter-of-the-best-answer-before-each-number-1-which-best-characterizes-qualitative-researcha-it-has-small-sample-sizec-it-uses-rating-scale-in-d">
+                            14. POSTTEST. Read the statements carefully. Write the letter of the best answer before each number.1. Which BEST characterizes qualitative research?A. It has small sample sizeC. It uses rating scale in data gatheringB. It generates statistical dataD. It focuses on specific variables to study2. Which BEST describes quantitative research?A. It uses structured instrumentC. It creates a new hypothesis and theoryB. It generates open-ended responsesD. It provides results which are generalizable3. What research type arrives at a narrative report rather than statistical report?A. descriptiveB. experimental C. qualitativeD. quantitative4. What research type gathers data in the form of images and words rather than numbers?A exploratoryB. narrativeC. quantitativeD. qualitative5. Which research can be categorized under humanities and social sciences?A. Effectiveness of Warm-Up exercises for HikersB. Sweetened Ampalaya: An Innovative Product for DiabeticsC. Assessment of the Accuracy of Waze in Searching for LocationD. Relationship between Gender and Leadership Qualities of Grade 11 students: Basis for Gender anEquality Program6. This term means the standards which identify what is acceptable and unacceptable in conductingresearch?A. NormsB. StandardsC. Research ethics D.Ethical considerati7. What does anonymity mean in research writing?A. The respondent's identity is not revealed.C.B. The respondents know who are being studied.C. The respondents are fully aware that they are being studied.D. The respondents do not allow the researcher to take photos and videos8. How does a researcher observe justice in a research?A. The researcher conducts a study which benefits the society.B. The researcher protects personal information of respondents.C. The researcher observes unbiased selection process of respondents.D. The researcher gets the approval of the respondents before proceeding to the study.9. Which of these demonstrate integrity of the research?A. The researcher uses correct and accurate information.B. The researcher writes to the owner of ideas he/she used in the paper.C. The researcher reads thoroughly related literature and puts them on the paper.D. The researcher submits the intellectual property of fellow researchers.10. Which of the following can be considered unethical action?A. Informing the respondents on the true purpose of the study.B. Asking permission to record the interview from the respondentC. Studying the respondents or research subjects with their knowledgeD. Asking a respondent questions that cause him or her extreme embarrassment.​</h2><br />
+                        <p><strong>Answer:</strong></p><p><strong>1</strong><strong>.</strong><strong>a</strong></p><p><strong>2.</strong><strong>a</strong></p><p><strong>3</strong><strong>.</strong><strong>c</strong></p><p><strong>4b</strong></p><p><strong>5</strong><strong>.</strong><strong>c</strong></p><p><strong>6</strong><strong>.</strong><strong>d</strong><strong> </strong></p><p><strong>7</strong><strong>.</strong><strong>d</strong></p><p><strong>8c</strong></p><p><strong>9</strong><strong>.</strong><strong>b</strong></p><p><strong>10</strong><strong>.</strong><strong>a</strong></p><p><strong>Explanation:</strong></p><p><strong> </strong><strong>paki</strong><strong> </strong><strong>follow</strong><strong> </strong><strong>nalang</strong><strong> </strong><strong>po</strong><strong>:-D</strong><strong>:-D</strong></p><br />
+                                            <h2 class="ez-toc-section" id="activity-1-write-true-if-the-statement-is-correct-otherwise-write-false-write-the-answer-on-your-answer-sheet-___________1-every-change-you-make-to-your-bios-structure-is-saved-on-cmos-___________2">
+                            15. ACTIVITY 1. Write TRUE if the statement is correct otherwise write FALSE. Write the answer on your answer sheet.___________1. Every change you make to your BIOS structure is saved on CMOS.___________2. POST is an acronym for the Power-On Software Test.___________3. BIOS drivers are the many programs stored in your computer’s memory chips.___________4. Windows 10 uses UEFI system.___________5. Newer PCs have replaced the bootstrap loader with an EFI.___________6. CMOS is an acronym for Complementary Meta-Oxide Semiconductor.___________7. The last step in activating BIOS in Windows 10 is selecting 'UEFI Firmware Settings.'___________8. You can change the boot order of the devices under BIOS.___________9. BIOS will not load under windows 7 if you did not press the BIOS hotkey upon opening your PC.___________10. Oftentimes your computer will indicate on the startup screen which key or keys need to be pressed in order to enter BIOS settings.ACTIVITY 2: IdentificationSelect the answer in the box below and write the answer in your answer sheet.__________1. It tests the hardware of your PC and ensures that there is nothing out of order and no errors present with your operating system.__________2. It contain a number of hardware configuration options that can be changed through the setup utility.__________3. It’s the successor to the traditional BIOS. UEFI offers support for boot volumes over 2 TB in size__________4. It is a term that pertains to the way a system is set up.__________5. It is tasked with reading your PC’s hard drive boot sector to move along the complete operating system load.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>true</p><p>true</p><p>false </p><p>true </p><p>false </p><p>false </p><p>true</p><p>false</p><p>true</p><p>true</p><p></p><p><strong>Answer:</strong></p><p>1.true</p><p>2.true</p><p>3.false</p><p>4.true</p><p>5.false</p><p>6.false</p><p>7.true</p><p>8.false</p><p>9.true</p><p>10.true</p><p><strong>Explanation:</strong></p><p>thanks for the points :)</p><br />
+                                            <h2 class="ez-toc-section" id="1-the-structural-planning-of-roles-to-implement-necessary-functions-2-program-strategies-are-laid-out-to-achieve-the-desired-outcome-3-the-recruitment-selection-and-retention-of-members-wherein-t">
+                            16. 1. The structural planning of roles to implement necessary functions.2. Program strategies are laid out to achieve the desired outcome.3. The recruitment, selection, and retention of members wherein they are givenan appropriate assignment with proper training and professionaldevelopment.4. It directs the organization to motivate and empower individuals in carryingout the program.5. It deals with tasks and accountabilities to accomplish the objectivesthrough cooperation.​</h2><br />
+                        <p><strong>1. Controlling</strong></p><p></p><p><strong>Further explanation:</strong></p><p><strong></strong></p><p><strong>Controlling</strong> is one of the important management functions that must be carried out by all managers to achieve organizational goals. Control can be defined as a management function to ensure that activities within the organization are carried out as planned. This controlling function also ensures that organizational resources have been used efficiently and effectively to achieve organizational goals.</p><p></p><p><strong>2. Planning </strong></p><p><strong></strong></p><p><strong>Further explanation:</strong></p><p><strong></strong></p><p><strong>Planning</strong> as a process is the activity of selecting or setting organizational goals and determining the strategies, policies, projects, programs, procedures, methods, systems, budgets and standards needed to achieve goals.</p><p></p><p>That way, in the <strong>planning</strong> there will be activities of testing several directions of achievement, assessing uncertainty, measuring capacity, determining the direction of achievement, and determining steps to achieve it.</p><p></p><p><strong>3. Staffing</strong></p><p><strong></strong></p><p><strong>Further explanation:</strong></p><p><strong></strong></p><p><strong>Staffing</strong> is one of the management functions in the form of preparing personnel in an organization from an early age from recruiting workers, developing them to efforts so that each officer gives maximum efficiency to the organization.</p><p></p><p><strong>4. Leading</strong></p><p><strong></strong></p><p><strong>Further explanation:</strong></p><p><strong></strong></p><p><strong>Leading</strong> is a series of processes used so that every member in the organization can work together in achieving organizational goals. A manager must be able to guide, direct, move and motivate and influence subordinates in order to carry out the tasks that have been planned to achieve organizational goals/targets.</p><p></p><p><strong>5. Organizing</strong></p><p><strong></strong></p><p><strong>Organizing</strong> is an action to determine the organizational structure, division of work and cooperative relationships among the parts needed to achieve certain results.</p><p></p><p>To learn more about management functions, visit the following links:</p><p>https://brainly.ph/question/18909971</p><p></p><p>#SPJ6</p><br />
+                                            <h2 class="ez-toc-section" id="directions-find-the-answer-to-the-questions-in-the-word-search-puzzle-1-the-if-selection-statement-is-a___________because-it-selects-or-ignores-asingle-action-or-as-well-soon-see-a-single-group">
+                            17. Directions: Find the answer to the questions in the word search puzzle.1. The if selection statement is a___________because it selects or ignores asingle action (or, as we'll soon see, a single group of actions2. The if...else statement is called a _________because it selects between twodifferent actions (or groups of actions).3.________As name refers instructions are executed in the sequence inwhich they are written in the program.4.___________A structure which select which statement or block ofstatements will execute on the basis of our programming logic.5.___________a keyword with any uppercase letters is a syntax error.pahelp PO rate ko PO excellent ​</h2><br />
+                        <p><strong>Answer:</strong></p>  Condition/ Conditional Statement<br />
+                                            <h2 class="ez-toc-section" id="helpppp%e2%80%bc%ef%b8%8f%e2%80%bc%ef%b8%8f1-what-term-refers-to-a-set-of-activities-designed-to-attract-qualified-applicants-b-recruitment-c-selection-d-training-2-attracting-applicants-from-out">
+                            18. HELPPPP‼️‼️1. What term refers to a set of activities designed to attract qualified applicants B. Recruitment C. Selection D. Training 2. Attracting applicants from outside the organization for a job vacancy is called_recruitment. A External B. Internal C. Structured D. Unstructured 3. What staffing process involves choosing qualified applicants to fill job vacancies? A. Development B. Recruitment C. Selection D. Training measure the 4. Which of the following employment tests is designed to applicant's cognitive ability and decision-making skills? A. Intelligence Test B. Personality Test C. Psychological Test D. Trade Test 5. What selection process involves question and answer to obtain applicant's information? A Interview B. Job Analysis C. Notification D. Orientation 6. What do you call an rganized activity or learning conducted to improve employee performance? A. Feedback B. Motivationc. Skill D. Training 7. Which of the following is a series of short hours training? A. Distributed Learning B. Massed Learning C. OJT D. OTJ 8. The following are learning principles to be considered in designing training programs EXCEPT A. Individual Differences B. Modeling C. Position D. Reinforcement 9. Who among the following employees basically needs apprenticeship training program? B. Newly hired C. Newly promoted D. Poor performance A. Expert 10. Which of the following is best to employ when a supervisor is given a development program and training which should be done away from his workplace? A. Coaching B. Job Rotation c. Mentoring D. Scholarship Program​ help me plss​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.b</p><p>2.a</p><p>3.c</p><p>4.a</p><p>5.b</p><p>6.d</p><p>7.d</p><p>8.d</p><p>9.b</p><p>10.d</p><p></p><p><strong>Explanation:</strong></p><p>correct me if I am wrong(not sure)</p><br />
+                                            <h2 class="ez-toc-section" id="performance-tasktransfer-goal-students-will-be-able-to-independently-use-their-learning-to-engage-in-activitiesthat-promote-proper-nutrition-and-healthful-habits-in-order-to-maintain-proper-function">
+                            19. Performance Task:TRANSFER GOAL: Students will be able to independently use their learning to engage in activitiesthat promote proper nutrition and healthful habits in order to maintain proper function of the organsystems.Deadline: February 28, 2022Engaging Scenario:The World Health Organization (WHO) and the Department of Health (DOH) recentlyannounced their desire to enlist the help of volunteers for a nationwide project aimed at decreasingthe rate of malnutrition in the country. You are a youth volunteer to help conduct a growth monitoringprogram and supplementary feeding program in schools within your community to support the project.You will form a group of volunteers who will facilitate “Operation Timbang: to identify which schoolhas the highest rate of malnutrition cases. This will serve as the indicator on how you will performyour mission to decrease malnutrition cases in the location. You will also be calling for the students’parents to educate them about the proper nutrition appropriate to their financial status.As part of the initial phase of the mission, your volunteer group is tasked to write a proposal ofhow you can attain the objectives parallel to the goals of WHO and DOH to decrease malnutritioncases. Knowing the demographics of the prospective schools, prepare a proposal that should suitchildren aged 5-12 and their parents or guardians. Your plan of action should include the following: an estimate of the nutritional requirements of children with malnutrition, a recommendation to improve dietary management of malnutrition, a seminar for parents on the importance of providing good food to their children, andpresentation approach on how the different organ systems work and interact to carry outessential body processes and how malnutrition can affect these body processes.Your proposal will be reviewed and evaluated by selected personnel from WHO and DOHbased on content, organization, quality, spelling and grammar, originality, and timeliness.Write your proposal in a 8.5’x13” file or long bond paper. Include with a cover page andtable of contents. Save your documents in a pdf form.RUBRICSCONTENTThe plan of action contains comprehensive and clear details of steps, withfocus on dietary management and seminar for parents. The output includescover page and table of contents.30%ORGANIZATIONThe ideas and information are logically and coherently structured. The paperfollows the problem solution-justification form. It is also saved in a pdf format.25%QUALITY AND ORIGINALITYTone is very persuasive and interesting. Output is unique and is not similar toanother output. Plagiarism is not detected25%SPELLING AND GRAMMARSpelling and grammar are correct10%TIMELINESSPerformance task is submitted on time. A deduction will be given per day forlate submission.10%TOTAL 100%​</h2><br />
+                        <p><strong>Answer:</strong></p><p> because i need this app.</p><br />
+                                            <h2 class="ez-toc-section" id="b-table-c-place-holder-d-text-box-6-it-is-the-product-of-the-graphic-arts-especially-commercial-design-or-illustration-a-message-b-graphics-c-verification-d-text-7-it-allows-users-to-add-eff">
+                            20. b. Table c. Place Holder d. Text Box 6. It is the product of the graphic arts, especially commercial design or illustration a. Message b. Graphics c. Verification d. text 7. It allows users to add effects to text or images in a slide. a. PowerPoint Animation b. Slideshow c. Audio File d. Video 8. This are tools used to make any presentation interesting and exciting. a. audio and video b. animations c. hyperlinks d. text and graphics 9. It is a program software package used to display information in form of a slide show. a. animations b. hyperlinks c. multimedia presentation d. navigation structure 10. is a sequence of effects to your slides which content gives the illusion of continuous motion when rapidly displayed one after the other. a. hyperlinks b. animations c. text and graphics d. audio and video 11. It is a link from a hypertext file or document to another location or file, typically activated by clicking on a highlighted word or image on the screen. a navigation structure b. animation c. hyperlinks d. photos 12. Where can we find and select the picture file you want to insert picture or graphic? a. in Home window b. In the Insert Picture window c. File menu d. In transition​</h2><br />
+                        <p><strong>Answer:</strong></p><p>6. It is the product of the graphic arts, especially commercial design or illustration</p><p>a. Message <strong>b. Graphics</strong> c. Verification d. text </p><p>7. It allows users to add effects to text or images in a slide.</p><p><strong>a. PowerPoint Animation</strong> b. Slideshow c. Audio File d. Video</p><p>8. This are tools used to make any presentation interesting and exciting. </p><p>a. audio and video <strong>b. animations</strong> c. hyperlinks d. text and graphics</p><p>9. It is a program software package used to display information in form of a slide show.</p><p>a. animations b. hyperlinks <strong>c. multimedia presentation</strong> d. navigation structure</p><p>10. is a sequence of effects to your slides which content gives the illusion of continuous motion when rapidly displayed one after the other.</p><p>a. hyperlinks <strong>b. animations</strong> c. text and graphics d. audio and video</p><p>11. It is a link from a hypertext file or document to another location or file, typically activated by clicking on a highlighted word or image on the screen.</p><p>a navigation structure b. animation <strong>c. hyperlinks</strong> d. photos</p><p>12. Where can we find and select the picture file you want to insert picture or graphic?</p><p>a. in Home window <strong>b. In the Insert Picture window</strong> c. File menu d. In transition​
+</p><p>#BRAINLYFAST</p><p><strong>Explanation:</strong></p><p>Check out this link to learn about the importance of graphics: https://brainly.ph/question/12672999</p><br />
+                                            <h2 class="ez-toc-section" id="19-in-events-what-do-you-call-groups-of-people-who-will-participate-in-the-event-a-organizers-c-participants-d-teachers-b-learners-20-this-pertains-to-the-main-reason-why-an-event-like-dance-e">
+                            21. 19. In events, what do you call groups of people who will participate in the event? A. Organizers C. Participants D. Teachers B. Learners 20. This pertains to the main reason why an event like dance event must pursue. A. Cause B. Participants C. Fund D D. Awards 21. Due to the pandemic health restrictions, where can you best participate in a dance event? A. Online B. School C. Barangay Hall D. Outside 22. Which of the following is the best benefit of dancing? A. Entertainment B. To document C. Showcase talent D. Fitness 23.The purpose of pacing in dance exercise is A. to regulate daily activities. B. to structure an increase in tolerance through gradually increased activity. C. to break an activity up into active and rest periods. D. to increase in pain levels. 24. Dance events allow you to develop your social skills. *Management is a structural planning of roles to implement necessary functions. A. Only the first statement is correct. C. Both statements are correct. D. Both statements are wrong. B. Only the second statement is correct. 25. *Decisions of venue and location must relate back to the dance events dance facilities. *The location is the actual site of the event, which could be an existing event venue or A. Only the first statement is correct. C. Both statements are correct. D. Both statements are wrong. B. Only the second statement is correct. 26. *Target audience, venue availability, market characteristics and event organizers suitable objective of the dance event. *Decisions about when to stage it may or may not be an option, as they may be of factors. A. Only the first statement is correct. C. Both statements are com D. Both statements are wrong B. Only the second statement is correct. 27*There must be continual reference back to the aims and objectives of the dance event *Audience requires a detailed consideration of the dance event target market A. Only the first statement is correct. C. Both statements are correct. D. Both statements are wrong. B. Only the second statement is correct. 28. *The total development of an individual in terms of management is centered on a philosophically sound program structure and activities flexoffice Black el site. C. Both statements are correct. D. Both statements are wrong. ces help define an external set *Management requires harmonious effort amongst members to fulfill the target objective. A. Only the first statement is correct. C. Both statements are correct. D. Both statements are wrong. B. Only the second statement is correct. 29. *Planning aids in developing a group structure with definite scope of work for every member. *Staffing includes decision-making, communication, selection of people, and enhancing the performance of individuals. A. Only the first statement is correct. C. Both statements are correct. D. Both statements are wrong. B. Only the second statement is correct. 30. *Management gives a grasp and value to the essential ideals of the field's discipline. *Organization provides guidelines in the collaborative strengths of people. A. Only the first statement is correct. C. Both statements are correct. D. Both statements are wrong. B. Only the second statement is correct. 31. *Decision-making, communication, selection of people, and enhancing the performance of individuals is a function of organization and management. *Each event is different in its nature, the process of planning &amp; execution of each event differs on basis of type of dance event. A. Only the first statement is correct. C. Both statements are correct. D. Both statements are wrong. B. Only the second statement is correct. 32. *Instilling good relations contributes to the success of the event organizer such as programming. *Correct balance of activities to meet the needs of all the different stakeholders in the dance event should be considered. A. Only the first statement is correct. B. Only the second statement is correct.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>19a</p><p>20b</p><p>21d</p><p>22c</p><p></p><p>23c</p><p>24b</p><p></p><p>25b</p><p>26b</p><p>27c</p><p>28a</p><p>29d</p><p>30d</p><p>31c</p><p>32a</p><p><strong>Explanation:</strong></p><p>Ayan ans</p><br />
+                                            <h2 class="ez-toc-section" id="direction-instruction-read-and-understand-the-selections-provided-below-then-show-your-reaction-in-2-3-sentences-to-some-issues-presented-manila-philippines-%e2%80%94-%e2%80%9cundernutrition-is">
+                            22. Direction / instruction: read and understand the selections  provided below then show your reaction in 2-3 sentences to some issues presented. MANILA, Philippines — “Undernutrition is the single greatest threat to a child’s life.”Dr Martin Parreño, National Program Officer of the World Food Programme-Philippines, called on Filipinos to pay more attention to child malnutrition at all times — with or without disasters.Latest statistics from the National Nutrition Council (NNC) showed that 67% of Filipino families are not eating enough even when there are no calamities.In the Philippines, malnutrition is seen across all age groups — from infancy to adulthood, the 2013 National Nutrition Survey revealed.“At the center of malnutrition’s underlying causes is inadequate childcare and feeding practices,” Parreño added. “And we don’t have a structure curriculum addressing this,” he said during the 2014 Dr Juan Salcedo Memorial Lecture organized by the Nutrition Foundation of the Philippines (NFP) on Thursday, October 9.Children who grew up in homes where parents did not care or invest in proper food and hygiene will most likely grow up to become the same kind of parents, hence perpetuating the cycle.The Department of Education has been working on integrating health and nutrition lessons in school curricula. More recent strategies also try to involve parents in classes and school-based supplementary feeding programs.Such efforts, however, will remain fruitless unless more parents realize the value of nutrition and their roles as primary caregivers.​comprehension questions:1. what is the main issue presented?2. as cited, what is the underlying cause of this problem?3.how can we solve malnutrition problem in the Philippines?4. do you agree that children who grew up in homes where parents did not care or invest proper food and hygiene will mostly become the same kind of parents in the future? why or why not?5. what can you say on the DepEd's plan to integrate health and nutrition lesson in school curricula? do you think it is beneficial ?6. explain whenever you agree or disagree with the author's of opinion about malnutrition?​</h2><br />
+                        <p><strong>Answer:</strong></p>Malnutrition Parents who did not invest in proper care for their children and not enough money for the familyBy supporting families who can't afford to take care the health of their children. No, because the children have learn a lesson from their parents to apply it to theirselves. It is superveneficial especially to children who are not provided a proper care. I agree whit the author because addressing malnutrition and knowing the cause will help governme t to take action<p></p><br />
+                                            <h2 class="ez-toc-section" id="musical-composition-music-composition-or-simply-composition-can-refer-to-an-original-piece-or-work-of-music1-either-vocal-or-instrumental-the-structure-of-a-musical-piece-or-to-the-process-of-cr">
+                            23. Musical composition, music composition or simply composition, can refer to an original piece or work of music,[1] either vocal or instrumental, the structure of a musical piece or to the process of creating or writing a new piece of music. People who create new compositions are called composers. Composers of primarily songs are usually called songwriters;[2][3] with songs, the person who writes lyrics for a song is the lyricist. In many cultures, including Western classical music, the act of composing typically includes the creation of music notation, such as a sheet music "score," which is then performed by the composer or by other musicians. In popular music and traditional music, songwriting may involve the creation of a basic outline of the song, called the lead sheet, which sets out the melody, lyrics and chord progression. In classical music, orchestration (choosing the instruments of a large music ensemble such as an orchestra which will play the different parts of music, such as the melody, accompaniment, countermelody, bassline and so on) is typically done by the composer, but in musical theatre and in pop music, songwriters may hire an arranger to do the orchestration. In some cases, a pop or traditional songwriter may not use written notation at all and instead compose the song in their mind and then play, sing or record it from memory. In jazz and popular music, notable sound recordings by influential performers are given the weight that written or printed scores play in classical music.
+Although a musical composition often uses musical notation and has a single author, this is not always the case. A work of music can have multiple composers, which often occurs in popular music when all members of a band collaborate to write a song or in musical theatre, when one person writes the melodies, a second person writes the lyrics and a third person orchestrates the songs.
+A piece of music can also be composed with words, images or, since the 20th century, with computer programs that explain or notate how the singer or musician should create musical sounds. Examples range from 20th century avant-garde music that uses graphic notation, to text compositions such as Karlheinz Stockhausen's Aus den sieben Tagen, to computer programs that select sounds for musical pieces. Music that makes heavy use of randomness and chance is called aleatoric music and is associated with contemporary composers active in the 20th century, such as John Cage, Morton Feldman and Witold Lutosławski. A more commonly known example of chance-based, or indeterminate, music is the sound of wind chimes jingling in a breeze. The study of composition has traditionally been dominated by examination of methods and practice of Western classical music, but the definition of composition is broad enough to include the creation of popular music and traditional music songs and instrumental pieces, and to include spontaneously improvised works like those of free jazz performers and African percussionists such as Ewe drummers.
+In the 2000s, composition is considered to consist of the manipulation of each aspect of music (harmony, melody, form, rhythm and timbre), according to Jean-Benjamin de Laborde (1780, 2:12):
+Composition consists in two things only. The first is the ordering and disposing of several sounds...in such a manner that their succession pleases the ear. This is what the Ancients called melody. The second is the rendering audible of two or more simultaneous sounds in such a manner that their combination is pleasant. This is what we call harmony and it alone merits the name of composition.
+answer ng maayus or pwede ka ma ban</h2><br />
+                        <p><strong>Answer:</strong></p><p>Musical composition, music composition or simply composition, can refer to an original piece or work of music, either vocal or instrumental, the structure of a musical piece or to the process of creating or writing a new piece of music. People who create new compositions are called composers.</p><p><strong>Explanation:</strong></p><p><strong>#carryonlearning</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="4-across-1-sql-stands-for-query-language-2-example-of-a-logical-connective-3-an-sql-command-included-in-the-ddl-4-an-sql-command-used-to-add-records-in-a-table-5-an-sql-command-classification-that">
+                            24. 4 Across 1. SQL stands for Query Language 2. Example of a logical connective 3 An SQL command included in the DDL 4. An SQL command used to add records in a table 5. An SQL command classification that includes GRANT and REVOKE 6. Operator that is used in a WHERE a clause to search for a specific pattern in a field 7. A DCL command that is used to remove all previously granted privileges 8. A clause in the SELECT command that specifies the conditions the records must satisfy 9. A flexible language that is used to communicate with a relational database such as MariaDB 10. A DML command used to display records Down 1. Adatabase interface that allows Java programs to access a database % is an example of a A DCL command used to give others privileges to access a database is an inquiry into the database using the SELECT statement in order to extract data from the database 5. ADML command used to remove both structure and data of a table or database 6. Example of a logical connective 7. The UPDATE command is used to a record of a table 8. MariaDB Connector/) is an example of a JDBC 9. DCL stand for Data Language 10. A DML command used to remove records from a table​</h2><br />
+                        <p></p><p><strong>Explanation:</strong></p><p>which of the following belongs to the first 50% that arrived earlier than the rest of the group?</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="3-complete-the-following-statements-by-choosing-the-correct-answers-from-the-box-write-your-answer-onthe-space-before-the-number-trainingplacementdevelopmentinterviewstructured-interview-massedselec">
+                            25. 3. complete the following statements by choosing the correct answers from the box. Write your answer onthe space before the number.TRAININGPLACEMENTDEVELOPMENTINTERVIEWSTRUCTURED INTERVIEW MASSEDSELECTIONTRAINING NEEDSDISTRIBUTEDRECRUITMENTEVALUATING THE TRAINING PROGRAM1. The positive effects of the implemented training program may be seen byassessing the participants' reactions, their acquired learnings and their behavior after completing thetraining. This process is called2is done to gauge or measure the applicant's ability to do the job.3. When the interviewer has a prepared question for the interviewee, the jobinterview is said to be a4. A type of training where it is programmed to be accomplished in five days at fourhours per day is calledtraining5. When the organization prepares its employees for a specific career goal, it iscalled human resource6. It is a set of activities designed to attract qualified applicants for job positionvacancies.7. The type of training where it is conducted in either few or long hours is calledtraining8. It is the specific areas for the improvement of knowledge and skills of humanresources.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>placement</p><p>training needs</p><p>training</p><p>selection</p><p>recruitment</p><p>distributed</p><p>evaluating the training program</p><p>structured interview massed</p><p>interview</p><p>development</p><p><strong>Explanation:</strong></p><p>pa brainliest po Tama yan nasagot ko na yan</p><p></p><p><strong>Answer:</strong></p><p>sbdhskak my phone is in your court date but T of dual</p><br />
+                                            <h2 class="ez-toc-section" id="the-future-gender-equality-robert-grant-the-future-gender-equality-recruiters-are-key-to-gender-solution-says-robert-grant-recruiters-know-about-hiring-but-they-could-and-arguably-should-be-more">
+                            26. "The Future Gender Equality" Robert Grant The future Gender equality Recruiters are key to gender solution, says Robert Grant Recruiters know about hiring, but they could- and arguably should be more influential to businesses around issues of gender equality. But this comes with responsibility and the need for any chosen recruiter to prioritise diversity as a business objective. Monitoring diversity means recruiters can address discrepancies. For example, equally qualified and sometimes more qualified women are not equally hired. Women's tenure is higher in banks than for men and fewer women are employed in the digital industry. To stay competitive, businesses must encourage hiring managers to understand the implications of these trends and should work in partnership with recruiters. Only by investing in good programs can recruiters properly support clients. IT systems that allow monitoring of all relevant diversity across both the internal employee and candidate recruitment lifecycle are now critical to good quality intelligence. Staff should be expected to work to inclusion guiding principles, but businesses need support systems in place and investment in on-going development on the value of diversity to the business. In 2013 Cititec is developing its people in strengths-based leadership. The next step is to use the strengths-based approach in recruitment. cititec man recruitment for a technical w Communicating transparency, especially in equal pay and flexible working, are critical. "Early in 2013 we launched a new Flexible Working Policy. Some of the barriers highlighted during the consultation period helped avoid ill feeling from people who may cover for their colleagues and for non-careers who sometimes feel their needs are overlooked. Now anyone can ask for flexible working and new IT systems mean we have the ability to support them," explains Cititec's CEO Stephen Grant. "Consequently there has been an increase of 33 per cent in senior women employed so far." Later in the year Cititec and Sateo, a specialist equality consultancy, will Citite Development launch Program. Aimed at internal staff, candidates, and clients, the program will bring men and women together to develop key leadership skills based on the strengths finder model. Only by recruiters investing in equality and working in partnership with clients, can issues around gender be explored alongside a problem solving approach. True gender equality can therefore start to be realized, and recruiters are the key to the solution. Directions: Read carefully the article, "The Future Gender Equality". Respond to the article by writing an essay in selecting the following concepts below. (Select only one concept). Use the Three-part structure you have leamed in the lesson. Write your response to the article in the worksheet provided. 1. Gender Stereotyping in the Society 2. Women Empowerment in the Philippines 3. No Gender: The New Leaderplss sAna bilisan​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Answer Key:</p><p></p><p>1. Gender Stereotyping in the Society </p><p>2. Women Empowerment in the Philippines </p><p>3. No Gender: The New Leader</p><p><strong>Explanation:</strong></p><p>Explanation Key:</p><p></p><p>1. Gender roles in society means how we're expected to act, speak, dress, groom, and conduct ourselves based upon our assigned sex. For example, girls and women are generally expected to dress in typically feminine ways and be polite, accommodating, and nurturing.</p><p>2. The Women's Empowerment (WE) program serves to acclimate women into their new community. Through community programs that build confidence and a pathway to earning a living.</p><p>3. Just over half (55%) say there's no difference between male and female political leaders when it comes to working out compromises.</p><br />
+                                            <h2 class="ez-toc-section" id="identify-what-is-asked-in-the-following-statement-______________1-it-is-the-study-of-animals-______________2-it-is-the-change-in-the-genetic-make-up-of-populations-of-organism-over-time-_________">
+                            27. Identify what is asked in the following statement. ______________1. It is the study of animals. ______________2. It is the change in the genetic make-up of populations of organism over time. ______________3. It is a global overpopulation which is rooted on a virtually environmental problems. ______________4. It is an understanding of basic ecological principles that can help prevent ecological disasters. ______________ 5. It is a process that does not need cell energy. ______________6. It is a carrier protein in a plasma membrane that temporarily bind with molecules. ______________7. Water molecules that diffuse across selectively permeable membranes from areas of higher concentration to areas of lower concentration. ______________8. It is essentially protein-free plasma that moves across capillary walls due to a pressure gradient across the wall. ______________ 9. It is a specific carrier protein in the plasma that membrane bind with molecules. ______________10. It is a bulk movement of material into a cell by the formation of a vesicle. ______________11. A term for a plasma membrane that encloses small amounts of fluid droplets and takes them into the cell. ______________12. It is a plasma membrane that forms a vesicle around a solid particle. ______________13. It is the extracellular molecules that bind with specific receptor protein on a plasma membrane, causing the membrane to invaginate and draw molecules into the cell. ______________14. It is a bulk movement of materials out of a cell. ______________15. It forms basal body of cilia and flagella functions in mitotic spindle formation. ______________16. It traps, transforms, and uses light energy to convert carbon dioxide and water into glucose and oxygen. ______________17. It is a structure of a cell that controls heredity and cellular activities. ______________18. It moves small particles past fixed cells and is a major form of locomotion in some cells. ______________19. It is a structure of a cell that dissolves substance, houses organelles and vesicles. ______________ 20. It assists in cell movement; provides support and site for binding of specific enzymes. ______________ 21. It is a structure of a cell that houses organelles and serves as fluid medium for metabolic reactions. ______________22. It functions as a storage and internal transport. ______________23. It carries signals to distant parts of an animal’s body. ______________24. It is a cell function that sorts, packages, and routes cell’s synthesized products. ______________25. It is a cell function that digest materials. ______________26. It isolates particular chemical activities from the rest of the cell. ______________27. It gives structural support and assist in cell movement. ______________28. It assists in movement of cilia, flagella, and chromosomes; transport system. ______________29. It is the dense site in the cytoplasm that gives rise to large numbers of microtubules with different functions in the cytoskeleton. ______________30. It converts energy into a form the cell can use. ______________31. It is a cell structure that preassembles the point for ribosomes. ______________32. It contains DNA that controls cell’s genetic program and metabolic activities. ______________33. It is a cell structure that regulates movement of materials. ______________34. Is the site of cell function for protein synthesis. ______________35. It is the storage site of food and other compounds; also pumps water out of a cell. ______________36. It is a cell structure believed to transport messenger RNA from the nucleus to the ribosomes. ______________37. It is a site of intracellular digestion, storage or transport. ______________38. It consists of a single layer of tightly packed, flatted disked-shaped cells. ______________39. It consists of a single layer of tightly packed, cube shaped cells. ______________ 40. It consists of a single layer of elongated cells.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.zoology</p><p>2. evolution</p><p>3. population</p><p>4. </p><p>5.passive transport</p><p>6.</p><p>7.osmosis</p><p>8.</p><p>9.</p><p>10. endocytosis</p><p>11.exocytosis</p><p>12.endocytosis</p><p>13.pinocytosis</p><p>14.exocytosis</p><p>15.centrioles</p><p>16.photosynthesis</p><p>17. nucleus</p><p>18.cytoskeleton</p><p>19.lysosomes</p><p>20.</p><p>21.cytoplasm</p><p>22.skeletal system</p><p>23.nervous system</p><p>24.golgi apparatus</p><p>25.lysosomes</p><p>26.</p><p>27.cytoskeleton</p><p>28.microtubeles</p><p>29.centrosome</p><p>30. cellular respiration</p><p>31.ribosome</p><p>32.nucleus</p><p>33.cell membrane</p><p>34.ribosomes</p><p>35.vacuole</p><p>36.mrna</p><p>37.lysosomes</p><p>38.simple cuboidal</p><p>39. simple epithelium</p><p>40. simple columnar epithelium</p><p></p><p><strong>Explanation:</strong></p><p>pabrainliest po salamat:&gt;</p><br />
+                                            <h2 class="ez-toc-section" id="14-which-of-the-following-is-not-included-on-the-network-devicea-modemsc-routersb-keyboardsd-network-connections15-it-is-an-electronic-device-for-storing-and-processing-data-typically-in-binar">
+                            28. 14. Which of the following is NOT included on the network device?A. ModemsC. RoutersB. KeyboardsD. Network Connections15. It is an electronic device for storing and processing data, typically in binary form. According toinstructions given to it in a variable program.A. Operating systemC. ComputerB. NetworkD. Windows16. It is a boot configuration utility that allows you to set the programs that will run at startup and toedit the files configurationA. Microsoft system ConfigurationC. Windows ConfigurationB. System Configuration UtilityD. Network Configuration17. It starts windows with basic services and drivers and the other services and (drivers only) startupprograms thatyouselect.A. Normal startupC. selective settingsB. Diagnostic startupD. General startup18. Which among the following is not included on the five functional tabs of system Configuration utility?A. GeneralC. servicesB. BootD. error19. It is the default tab in the system configuration and shows how the computer will start, by defaultnormal startup should be selected.A. GeneralC. BootB. TabD, services20. It allows you to enable or disable any of the Microsoft Windows services or other program servicesrunning on the computer.A. GeneralC. BootB. TabD. services21. It provides a convenient list of diagnostic tools and other advanced tools that you can run.A. GeneralC. ToolsB. BootsD. services22. It has a hierarchical structure like the directions on your hard disk.A. RegistryC. Control Panel AppletsD. Register Edit​</h2><br />
+                        <p><strong>Answer:</strong></p><p>B.</p><p>C</p><p>A</p><p>C</p><p>A</p><p>C</p><p>D</p><p>C</p><p><strong>Explanation:</strong></p><p>correct me if I'm wrong</p><br />
+                                            <h2 class="ez-toc-section" id="a-shopping-mall-offers-discounts-to-its-customers-if-the-amount-of-purchase-is-greater-than-php-5000-00-a-20-discount-will-be-given-design-an-algorithm-using-a-selection-structure-for-a-program-tha">
+                            29. A shopping mall offers discounts to its customers. If the amount of purchase is greater than Php 5000.00, a 20% discount will be given. Design an algorithm using a selection structure for a program that will compute the amount of the discount and the total amount to be paid by a customer.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>4000</p><p><strong>Explanation:</strong></p><p>because the discount is 20% subtract it in 5000.00,the solution:</p><p></p><p>  5000</p><p>-  20%</p><p>=4000.00</p><br />
+                                            <h2 class="ez-toc-section" id="1-social-welfare-agencies-are-also-social-systems-in-view-of-their-being-a-subjected-to-pressures-from-outside-and-within-the-organization-b-established-to-attain-specific-goals-have-internal-stru">
+                            30. 1. Social welfare agencies are also social systems in view of their being a. Subjected to pressures from outside and within the organization b. Established to attain specific goals, have internal structures, procedures. c. Made up of various levels of staff, volunteers and management d. Created by law and supported by taxes and the public 2. Government agencies are examples of a bureaucratic form or organization due a. To standard operating procedures observed during transactions. b. To nepotism, red tape and corruption c. To a short chain of command d. Efficiency and effectiveness of its program/ services 10. One of the functions of social work administration is a. Organizing of social welfare agency b. Identify social needs and social welfare programs to address these aceda c Directing the allocation of resources for specific programs/ services d. Recruitment, selection, and hiring social work persoanel in an agency​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.b</p><p>2.a</p><p>10.b</p><p></p><p>welcome:))</p><p></p><p></p><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/OoShU65HemA?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>computer_science</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/people-s-park-palace-in-the-sky.html">People s Park Palace In The Sky</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/powerpoint-templates-for-volleyball.html">Powerpoint Templates For Volleyball</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/best-pasalubong-from-pangasinan.html">Best Pasalubong From Pangasinan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/contribution-of-estrada-administration-in-health.html">Contribution Of Estrada Administration In Health</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/logo-for-buwan-ng-wika.html">Logo For Buwan Ng Wika</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/sdasdasd.html">Sdasdasd</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/poem-about-love-of-country-philippines.html">Poem About Love Of Country Philippines</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/shes-dating-the-gangster-author.html">Shes Dating The Gangster Author</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/gesture-movement-and-dance.html">Gesture Movement And Dance</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/least-mastered-topic-in-mathematics.html">Least Mastered Topic In Mathematics</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/cultural-relativism-in-the-philippines.html">Cultural Relativism In The Philippines</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/pangulong-tudling-halimbawa.html">Pangulong Tudling Halimbawa</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/sunny-baudelaire.html">Sunny Baudelaire</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/cookies-business-plan.html">Cookies Business Plan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/rizal-s-favorite-flower.html">Rizal s Favorite Flower</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/atribusyon-o-modipikasyon.html">Atribusyon O Modipikasyon</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/laosheng-peking-opera.html">Laosheng Peking Opera</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/global-community-poster.html">Global Community Poster</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/illegal-alignment-in-volleyball.html">Illegal Alignment In Volleyball</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/3i-s-research.html">3i s Research</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://poweredu.github.io"
+                            itemprop="url">QnA</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://poweredu.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://poweredu.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://poweredu.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://poweredu.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+    <script type='text/javascript' src='//jd3j7g5z1fqs.com/96/78/7a/96787a1945876b1a9c10f79941441964.js'></script>
+  <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4739059,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4739059&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>

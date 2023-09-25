@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Operating Issues - QnA</title>
+    <meta name="description" content="Operating Issues, , , , , , , 0, Operating System Design Issues - YouTube, www.youtube.com, 1280 x 720, jpeg, , 20, operating-issues, QnA" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Operating Issues - QnA" />
+    <meta property="og:description" content="Operating Issues, , , , , , , 0, Operating System Design Issues - YouTube, www.youtube.com, 1280 x 720, jpeg, , 20, operating-issues, QnA" />
+    <meta property="og:site_name" content="QnA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Operating Issues - QnA" />
+    <meta name="twitter:description" content="Operating Issues, , , , , , , 0, Operating System Design Issues - YouTube, www.youtube.com, 1280 x 720, jpeg, , 20, operating-issues, QnA" />
+    <link rel='stylesheet' id='generate-style-css' href='https://poweredu.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://poweredu.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://poweredu.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://poweredu.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://poweredu.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://poweredu.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://poweredu.github.io">Home</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://poweredu.github.io" rel="home"> QnA</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Operating Issues</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">melaniefloresalvarez</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Operating+Issues" alt="Operating Issues">
+                    </div>
+                    <p></p>
+                    <p>operation data issues solution​</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#operation-data-issues-solution%e2%80%8b">1.
+                                            operation data issues solution​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-is-the-the-issue-of-operation-of-provincial-buses%e2%80%8b">2.
+                                            what is the the issue of operation of provincial buses​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-are-the-controversial-issues-corrounding-wbg-operations">3.
+                                            What are the controversial issues corrounding WBG operations? </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#how-to-strengthen-your-business-operations-when-contemporary-economic-issues-hit-you-as-a-ceo%e2%80%8b">4.
+                                            how to strengthen your business operations when contemporary economic issues hit you as a CEO?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#identify-one-current-issue-in-strategic-operation-management-and-briefly-discuss-about-it-%e2%80%8b">5.
+                                            identify one current issue in strategic operation management and briefly discuss about it.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#provide-advice-about-business-issues-such-as-the-development-and-implementation-ofbusiness-plans-how-to-streamline-operations-or-how-to-expand-into-a-new-project">6.
+                                            provide advice about business issues, such as the development and implementation of
+business plans, how to streamline operations or how to expand into a new project.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#undelying-issues-or-major-ideas-and-concepts-in-jit-and-lean-operations%e2%80%8b">7.
+                                            undelying issues or major ideas and concepts in JIT and lean operations​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#why-are-people-issues-so-important-in-operations-management">8.
+                                            Why are people issues so important in operations management?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-differentiate-globalization-from-global-operation2-from-the-key-issues-in-considering-managing-global-operation-select-two-2-and-explain-and-cite-an-example-%e2%80%8b">9.
+                                            1. Differentiate globalization from global operation?2. From the key issues in considering managing global operation select two (2) and explain and cite an example? ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#it-releases-to-address-security-issues-and-improve-the-operation-of-hardware%e2%80%8b">10.
+                                            it releases to address security issues and improve the operation of hardware​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#cite-example-of-company-institution-discussing-fiscal-aspectissues-and-how-the-fiscal-aspect-affect-in-its-operation%e2%80%8b">11.
+                                            cite example of company institution discussing fiscal aspect/issues and how the fiscal aspect affect in its operation​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#they-know-how-to-handle-issues-in-any-area-of-the-business-be-it-finance-operations-or-marketing-%e2%80%8bcommunicatorsspecialistleadersproblem-solvers">12.
+                                            They know how to handle issues in any area of the business, be it finance, operations, or marketing.​CommunicatorsSpecialistLeadersProblem solvers</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#the-license-to-operate-lto-issued-to-the-clinical-laboratory-is-valid-for">13.
+                                            The license to operate (lto) issued to the clinical laboratory is valid for:</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#how-can-operational-issues-in-business-be-reduced">14.
+                                            How can operational issues in business be reduced?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#which-of-the-following-are-potential-issues-in-managing-global-operations">15.
+                                            Which of the following are potential issues in managing global operations?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-ethical-issues-appear-to-be-involved-with-the-cape-town-cage-diving-operators-and-their-customers">16.
+                                            what ethical issues appear to be involved with the Cape Town cage-diving operators and their customers?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#is-a-retail-company-that-began-operations-on-authorize-to-issue-1000000-share-of-p10-par-value-ordinary-share-and-500000-shares-of-3">17.
+                                            Is a retail company that began operations on. authorize to issue 1,000,000 share of p10 par value ordinary share and 500,000 shares of 3%?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#as-someone-who-studied-expanded-and-operational-definitions-what-advice-would-you-offer-our-government-officials-and-health-experts-to-resolve-the-issue-lay-a-specific-course-of-action-to-address-th">18.
+                                            As someone who studied expanded and operational definitions, what advice would you offer our government officials and health experts to resolve the issue? Lay a specific course of action to address the issue on public health misinformation.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#when-a-user-issues-a-command-to-start-application-software-the-operating-system-locates-the-program-in-memory-and-loads-it-into-storage">19.
+                                            When a user issues a command to start application software, the operating system locates the program in memory and loads it into storage?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-is-the-issue-of-modular-instructionoperation-of-provincial-buses%e2%80%8b">20.
+                                            What is the Issue of modular instructionOperation of provincial buses​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#risk-and-disaster-preparedness-campaign-during-humanitarian-aid-operation-identity-any-humanitarian-aid-operationeffort-undertaken-in-the-country-why-and-for-whom-beneficiaries-was-it-initiated-i">21.
+                                            Risk and disaster preparedness campaign during humanitarian aid operation.identity any humanitarian aid operation/effort undertaken in the country. Why and for whom (beneficiaries) was it initiated? identify any underlying issues/s or controversy/ies surrounding such humanitarian aid operation/effort. ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#describe-the-food-preparation-operation-cycle-of-the-following-activity-a-purchasingb-receiving-c-storingd-issuing-e-preparing%e2%80%8b">22.
+                                            describe the food preparation operation cycle of the following activity a. purchasingb. receiving c. storingd. issuing e. preparing​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-strategy-could-you-suggest-to-address-operational-issues-in-tourism%e2%80%8b">23.
+                                            what strategy could you suggest to address operational issues in tourism​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-_____the-local-government-has-the-jurisdiction-over-the-area-wherelocated-issues-business-licenses-or-license-to-operate-to-establishments%e2%80%8b">24.
+                                            1. _____The local government has the jurisdiction over the area wherelocated issues business licenses or license to operate to establishments​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#discuss-the-common-health-risk-and-issues-for-computer-users-when-operating-a-computer">25.
+                                            discuss the common health risk and issues for computer users when operating a computer</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#true-or-false-the-local-government-has-no-jurisdiction-over-the-area-in-issuing-business-licenses-to-operate-to-establishment%e2%80%8b">26.
+                                            true or false the local government has no jurisdiction over the area in issuing business licenses to operate to establishment​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-what-is-meant-by-safety2-why-do-we-need-to-observe-safety-practies-during-farm-operation3-what-are-the-different-safety-issues-to-consider-during-farm-operation%e2%80%8b">27.
+                                            1.what is meant by safety?2.why do we need to observe safety practies during farm operation?3.What are the different safety issues to consider during farm operation?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#give-your-opinion-on-fathers-day-to-human-address-the-issues-in-our-country-today-in-philippine-offshore-gaming-operationpogo%e2%80%8b">28.
+                                            give your opinion on father's day to human address the issues in our country today in Philippine offshore gaming operation/POGO​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#risk-and-disaster-preparedness-campaign-during-humanitarian-aid-operation-identity-any-humanitarian-aid-operationeffort-undertaken-in-the-country-why-and-for-whom-beneficiaries-was-it-initiated-i">29.
+                                            Risk and disaster preparedness campaign during humanitarian aid operation.identity any humanitarian aid operation/effort undertaken in the country. Why and for whom (beneficiaries) was it initiated? identify any underlying issues/s or controversy/ies surrounding such humanitarian aid operation/effort. ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#discuss-the-common-health-risk-and-issues-for-computer-users-when-operating-a-computer">30.
+                                            Discuss the common health risk and issues for computer users when operating a computer.</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="operation-data-issues-solution%e2%80%8b">
+                            1. operation data issues solution​</h2><br />
+                        Answer:<p></p>Identify problems. Describe the current situation. Take temporary countermeasures on the spot. Find the root cause. Propose solutions. Establish an action plan. Check results.<p></p>[tex]hope \: it \: helps[/tex]<p>#RespectOurModerators</p><br />
+                                            <h2 class="ez-toc-section" id="what-is-the-the-issue-of-operation-of-provincial-buses%e2%80%8b">
+                            2. what is the the issue of operation of provincial buses​</h2><br />
+                        <p><strong>Answer:</strong></p><p>MANILA, Philippines — The government has allowed provincial buses in point-to-point routes to resume operations in a bid to further pump life into the COVID-19 pandemic-hit economy.</p><p></p><p>According to presidential spokesperson Harry Roque, President Rodrigo Duterte and his Cabinet approved the resumption of provincial bus operations in point-to-point routes during a meeting on Monday night.</p><p></p><p></p><p></p><p>Only those point-to-point routes approved by the Land Transportation Franchising and Regulatory Board (LTFRB) and the local government unit, as well as their stop-over/transit terminals will be allowed to operate, Roque said.</p><p></p><p>“Hintayin lang po natin ang guidelines na ilalabas ng DOTr (Department of Transportation) at LTFRB ukol dito,” Roque said.</p><br />
+                                            <h2 class="ez-toc-section" id="what-are-the-controversial-issues-corrounding-wbg-operations">
+                            3. What are the controversial issues corrounding WBG operations? </h2><br />
+                        <p><strong>Answer:</strong></p><p><strong>these </strong><strong>organization</strong><strong> </strong><strong>cause </strong><strong>high</strong><strong> </strong><strong>infant</strong><strong> </strong><strong>mortality</strong><strong> </strong><strong>rates </strong><strong>in </strong><strong>underdeveloped</strong><strong> </strong><strong>and </strong><strong>developing</strong><strong> </strong><strong>countries</strong><strong> </strong></p><p><strong>Explanation:</strong></p><p>pa brainleists po </p><br />
+                                            <h2 class="ez-toc-section" id="how-to-strengthen-your-business-operations-when-contemporary-economic-issues-hit-you-as-a-ceo%e2%80%8b">
+                            4. how to strengthen your business operations when contemporary economic issues hit you as a CEO?​</h2><br />
+                        <p><strong>Answer:</strong></p><p>The stronger your business is, the less likely it is to be affected by risks — if they do eventuate — or unforeseen events. Strengthening your business doesn't just involve financial management. It also includes strategies to retain and broaden your customer base, market your business affordably, keep morale high amongst your staff and improve business practices. You should also look for opportunities to network and form alliances; this will help minimise your exposure to risks.</p><br />
+                                            <h2 class="ez-toc-section" id="identify-one-current-issue-in-strategic-operation-management-and-briefly-discuss-about-it-%e2%80%8b">
+                            5. identify one current issue in strategic operation management and briefly discuss about it.​</h2><br />
+                        <p>There are multiple challenges that operations managers face on a daily basis; this blog highlights the following five: globalization, sustainability, ethical conduct, ineffective communication, and system design</p><br />
+                                            <h2 class="ez-toc-section" id="provide-advice-about-business-issues-such-as-the-development-and-implementation-ofbusiness-plans-how-to-streamline-operations-or-how-to-expand-into-a-new-project">
+                            6. provide advice about business issues, such as the development and implementation of
+business plans, how to streamline operations or how to expand into a new project.</h2><br />
+                        <p><strong>Answer:</strong></p><p><strong>1.Begin the Plan with a Summary.</strong></p><p><strong>2.Describe Your Company — Its Business, Goals and Objectives.</strong></p><p><strong>3.Analyze Your Market and Determine Your Marketing Strategy.</strong></p><p><strong>4.Describe Your Product/Service and How They are Produced.</strong></p><p><strong>5.Describe Your Management Organization.</strong></p><p><strong></strong></p><p><strong>There are four key areas that can help drive profitability. These are reducing costs, increasing turnover, increasing productivity, and increasing efficiency. You can also expand into new market sectors, or develop new products or services.</strong></p><br />
+                                            <h2 class="ez-toc-section" id="undelying-issues-or-major-ideas-and-concepts-in-jit-and-lean-operations%e2%80%8b">
+                            7. undelying issues or major ideas and concepts in JIT and lean operations​</h2><br />
+                        <p><strong>Answer:</strong></p><p>you shock me give me many many knowledge</p><p><strong>Answer:</strong></p><p>The just-in-time (JIT) inventory system is a management strategy that aligns raw-material orders from suppliers directly with production schedules. Companies employ this inventory strategy to increase efficiency and decrease waste by receiving goods only as they need them for the production process, which reduces inventory costs. This method requires producers to forecast demand accurately.</p><p><strong>Explanation:</strong></p><p>:)</p><br />
+                                            <h2 class="ez-toc-section" id="why-are-people-issues-so-important-in-operations-management">
+                            8. Why are people issues so important in operations management?</h2><br />
+                        <p><strong>Answer:</strong></p><p>People issues are always important in all work. In manufacturing, safety is extremely important, so workers must be alert and focused, and not stressed out. Also, in operations, team cohesion and morale are critical factors. </p><p></p><p><strong>Answer:</strong></p><p>Operations management is important in a business organization because it helps effectively manage, control and supervise goods, services and people. ... It also helps people like nurses, doctors, surgeons, and other health officers deliver timely service.</p><br />
+                                            <h2 class="ez-toc-section" id="1-differentiate-globalization-from-global-operation2-from-the-key-issues-in-considering-managing-global-operation-select-two-2-and-explain-and-cite-an-example-%e2%80%8b">
+                            9. 1. Differentiate globalization from global operation?2. From the key issues in considering managing global operation select two (2) and explain and cite an example? ​</h2><br />
+                        <p><strong>Explanation:</strong></p><p>sorry po di ko Po Alam Yung sagot :(</p><p><strong>Answer:</strong></p><p>1.Globalism, at its core, seeks to describe and explain nothing more than a world which is characterized by networks of connections that span multi-continental distances. ... In contrast, globalization refers to the increase or decline in the degree of globalism.</p><p></p><p><strong>Explanation:</strong></p><p>ano po yung key issues ng number 2???</p><br />
+                                            <h2 class="ez-toc-section" id="it-releases-to-address-security-issues-and-improve-the-operation-of-hardware%e2%80%8b">
+                            10. it releases to address security issues and improve the operation of hardware​</h2><br />
+                        <p><strong>Explanation:</strong></p><p>hardware we use it for example hard rock </p><br />
+                                            <h2 class="ez-toc-section" id="cite-example-of-company-institution-discussing-fiscal-aspectissues-and-how-the-fiscal-aspect-affect-in-its-operation%e2%80%8b">
+                            11. cite example of company institution discussing fiscal aspect/issues and how the fiscal aspect affect in its operation​</h2><br />
+                        <p><strong>Answer:</strong></p><p> Fiscal policy, measures employed by governments to stabilize the economy, specifically by manipulating the levels and allocations of taxes and government expenditures. Fiscal measures are frequently used in tandem with monetary policy to achieve certain goals</p><p> </p><p>The usual goals of both fiscal and monetary policy are to achieve or maintain full employment, to achieve or maintain a high rate of economic growth, and to stabilize prices and wages. The establishment of these ends as proper goals of governmental economic policy and the development of tools with which to achieve them are products of the 20th century.</p><p></p><p>In taxes and expenditures, fiscal policy has for its field of action matters that are within government’s immediate control. The consequences of such actions are generally predictable: a decrease in personal taxation, for example, will lead to an increase in consumption, which will in turn have a stimulating effect on the economy. Similarly, a reduction in the tax burden on the corporate sector will stimulate investment. Steps taken to increase government spending by public works have a similar expansionary effect. Conversely, a reduction in government expenditure or an increase in tax revenues, without compensatory action, has the effect of contracting the economy.</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="they-know-how-to-handle-issues-in-any-area-of-the-business-be-it-finance-operations-or-marketing-%e2%80%8bcommunicatorsspecialistleadersproblem-solvers">
+                            12. They know how to handle issues in any area of the business, be it finance, operations, or marketing.​CommunicatorsSpecialistLeadersProblem solvers</h2><br />
+                        <p><strong>Answer:</strong></p><p>-Entrepreneurs possess critical thinking skills and look at problems as challenges or puzzles that they need to solve. They know how to handle issues in any area of the business, be it finance, operations, or marketing. </p><br />
+                                            <h2 class="ez-toc-section" id="the-license-to-operate-lto-issued-to-the-clinical-laboratory-is-valid-for">
+                            13. The license to operate (lto) issued to the clinical laboratory is valid for:</h2><br />
+                        <p><strong>Answer:</strong></p><p>The license is not valid for any premise/ location other than that which is stipulated therein. (b) The L TO issued to a clinical laboratory, unless sooner suspended or revoked, is valid for one year and expires on the date set forth by the CHD, as stipulated on the face of the license.</p><br />
+                                            <h2 class="ez-toc-section" id="how-can-operational-issues-in-business-be-reduced">
+                            14. How can operational issues in business be reduced?</h2><br />
+                        <p><strong>Explanation:</strong></p><p>4 steps – how to reduce operational risk:</p><p>step 1: managing equipment failures</p><p>step 2: keep strong business to business relationships</p><p>step 3: having adequate insurance</p><p>step 4: know the regulations</p><br />
+                                            <h2 class="ez-toc-section" id="which-of-the-following-are-potential-issues-in-managing-global-operations">
+                            15. Which of the following are potential issues in managing global operations?</h2><br />
+                        <strong>Answer:</strong><p></p>There are 3 of potential issues in managing global operations<p></p>1. Bribery <p></p><p>   —occurs when a person offers something of value to another person in order to receive something in exchange. </p><p></p>2. Differences in work ethic<p></p><p>  — a person's belief that hard work is morally good.</p><p></p>3. Corruption<p></p><p>  —Corruption, as defined by the World Bank, is a form of dishonesty or criminal offense undertaken by a person or organization entrusted with a position of authority, to acquire illicit benefit or abuse power for one's private gain. </p><p></p>#CarryOnLearning<br />
+                                            <h2 class="ez-toc-section" id="what-ethical-issues-appear-to-be-involved-with-the-cape-town-cage-diving-operators-and-their-customers">
+                            16. what ethical issues appear to be involved with the Cape Town cage-diving operators and their customers?</h2><br />
+                        <p>pedenponako makatulongsainyo</p><br />
+                                            <h2 class="ez-toc-section" id="is-a-retail-company-that-began-operations-on-authorize-to-issue-1000000-share-of-p10-par-value-ordinary-share-and-500000-shares-of-3">
+                            17. Is a retail company that began operations on. authorize to issue 1,000,000 share of p10 par value ordinary share and 500,000 shares of 3%?</h2><br />
+                        <p><strong>Answer:</strong></p><p>1,500,000 shares po</p><p><strong>Explanation:</strong></p><p>#PA BRAINLES PO AKO</p><br />
+                                            <h2 class="ez-toc-section" id="as-someone-who-studied-expanded-and-operational-definitions-what-advice-would-you-offer-our-government-officials-and-health-experts-to-resolve-the-issue-lay-a-specific-course-of-action-to-address-th">
+                            18. As someone who studied expanded and operational definitions, what advice would you offer our government officials and health experts to resolve the issue? Lay a specific course of action to address the issue on public health misinformation.</h2><br />
+                        <p><strong>Answer:</strong></p><p>Strategies in the control of an outbreak are screening, containment (or suppression), and mitigation. Screening is done with a device such as a thermometer to detect the elevated body temperature associated with fevers caused by the coronavirus.Containment is undertaken in the early stages of the outbreak and aims to trace and isolate those infected as well as introduce other measures to stop the disease from spreading. When it is no longer possible to contain the disease, efforts then move to the mitigation stage: measures are taken to slow the spread and mitigate its effects on the healthcare system and society. A combination of both containment and mitigation measures may be undertaken at the same time.Suppression requires more extreme measures so as to reverse the pandemic by reducing the basic reproduction number to less than </p><p></p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="when-a-user-issues-a-command-to-start-application-software-the-operating-system-locates-the-program-in-memory-and-loads-it-into-storage">
+                            19. When a user issues a command to start application software, the operating system locates the program in memory and loads it into storage?</h2><br />
+                        <p>A computer locates an operating system (system software) in storage, usually a hard disk, and loads it into memory (RAM). When a user issues a command to start application software, t<strong>he operating system locates the program in storage and loads it into memory (RAM)</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="what-is-the-issue-of-modular-instructionoperation-of-provincial-buses%e2%80%8b">
+                            20. What is the Issue of modular instructionOperation of provincial buses​</h2><br />
+                        <p><strong>Answer:</strong></p><p>modular/module </p><p><strong>Explanation:</strong></p><p>kong yan ang tinotokoy ninyo.</p><br />
+                                            <h2 class="ez-toc-section" id="risk-and-disaster-preparedness-campaign-during-humanitarian-aid-operation-identity-any-humanitarian-aid-operationeffort-undertaken-in-the-country-why-and-for-whom-beneficiaries-was-it-initiated-i">
+                            21. Risk and disaster preparedness campaign during humanitarian aid operation.identity any humanitarian aid operation/effort undertaken in the country. Why and for whom (beneficiaries) was it initiated? identify any underlying issues/s or controversy/ies surrounding such humanitarian aid operation/effort. ​</h2><br />
+                        <p><strong>Answer:</strong></p><p>One humanitarian aid operation in the Philippines was the response to Typhoon Haiyan (known locally as Typhoon Yolanda), which hit the country in November 2013. The typhoon caused widespread destruction and displacement, with over 6,000 people reported dead and millions affected.</p><p></p><p>The humanitarian aid operation was initiated to provide assistance to the affected communities, including emergency shelter, food, clean water, and medical care. The beneficiaries of the operation were the people who were affected by the typhoon, particularly those who lost their homes and livelihoods.</p><p></p><p>One underlying issue surrounding the aid operation was the slow response of the government and aid organizations in the initial days following the typhoon. There were reports of logistical challenges in getting aid to the affected areas, and some people complained that aid was not reaching them quickly enough.</p><p></p><p>Another issue was the displacement of people from their homes and communities. Many people were forced to relocate to evacuation centers or other parts of the country, where they faced challenges in accessing basic necessities and rebuilding their lives.</p><p></p><p>In addition, there were also reports of corruption and mismanagement of aid funds, which led to criticism from some quarters. Some aid organizations were also accused of prioritizing their own interests over those of the affected communities.</p><p></p><p>Despite these issues, the humanitarian aid operation helped to provide critical assistance to the affected communities and contributed to the recovery and rebuilding efforts in the affected areas.</p><p><strong>Explanation:</strong></p><p>hope it helpsss</p><br />
+                                            <h2 class="ez-toc-section" id="describe-the-food-preparation-operation-cycle-of-the-following-activity-a-purchasingb-receiving-c-storingd-issuing-e-preparing%e2%80%8b">
+                            22. describe the food preparation operation cycle of the following activity a. purchasingb. receiving c. storingd. issuing e. preparing​</h2><br />
+                        <p><strong>Answer:</strong></p><p>A. Purchasing</p><p></p><p>that's the right answer</p><p><strong>Explanation:</strong></p><p>I hope help you</p><br />
+                                            <h2 class="ez-toc-section" id="what-strategy-could-you-suggest-to-address-operational-issues-in-tourism%e2%80%8b">
+                            23. what strategy could you suggest to address operational issues in tourism​</h2><br />
+                        <p><strong>Answer:</strong></p><p>strategic you could suggest to address operational issues in tourist is </p><p>By keeping our invironment neat and clean</p><p>By making rules and regulations to every tourist</p><br />
+                                            <h2 class="ez-toc-section" id="1-_____the-local-government-has-the-jurisdiction-over-the-area-wherelocated-issues-business-licenses-or-license-to-operate-to-establishments%e2%80%8b">
+                            24. 1. _____The local government has the jurisdiction over the area wherelocated issues business licenses or license to operate to establishments​</h2><br />
+                        <p><strong>A</strong><strong>N</strong><strong>S</strong><strong>W</strong><strong>E</strong><strong>R</strong><strong>:</strong></p><p>1. Barangay Clearance The local government has the jurisdiction over the area where</p><p>located issues business licenses or license to operate to establishments</p><p></p><p>sorry po kung mali</p><br />
+                                            <h2 class="ez-toc-section" id="discuss-the-common-health-risk-and-issues-for-computer-users-when-operating-a-computer">
+                            25. discuss the common health risk and issues for computer users when operating a computer</h2><br />
+                        <p><strong>Answer:</strong></p><p>Inappropriate computer use can cause muscle and joint pain, overuse injuries of the shoulder, arm, wrist or hand, and eyestrain. Children can experience particular physical and psychological problems if they play computer games too much.</p><br />
+                                            <h2 class="ez-toc-section" id="true-or-false-the-local-government-has-no-jurisdiction-over-the-area-in-issuing-business-licenses-to-operate-to-establishment%e2%80%8b">
+                            26. true or false the local government has no jurisdiction over the area in issuing business licenses to operate to establishment​</h2><br />
+                        <p>ANSWER?</p><p><strong>True</strong></p><p></p><p>Take it or leave it Its fine</p><br />
+                                            <h2 class="ez-toc-section" id="1-what-is-meant-by-safety2-why-do-we-need-to-observe-safety-practies-during-farm-operation3-what-are-the-different-safety-issues-to-consider-during-farm-operation%e2%80%8b">
+                            27. 1.what is meant by safety?2.why do we need to observe safety practies during farm operation?3.What are the different safety issues to consider during farm operation?​</h2><br />
+                        1. the condition of being protected from or unlikely to cause danger, risk, or injury<br />
+                                            <h2 class="ez-toc-section" id="give-your-opinion-on-fathers-day-to-human-address-the-issues-in-our-country-today-in-philippine-offshore-gaming-operationpogo%e2%80%8b">
+                            28. give your opinion on father's day to human address the issues in our country today in Philippine offshore gaming operation/POGO​</h2><br />
+                        <p><strong>Answer:</strong></p><p>the POGO is the itlog na maliit</p><p><strong>answer</strong></p><p><strong>yumy</strong><strong> </strong><strong>hotdog</strong></p><p><strong>with</strong><strong> </strong><strong>cetchop</strong></p><br />
+                                            <h2 class="ez-toc-section" id="risk-and-disaster-preparedness-campaign-during-humanitarian-aid-operation-identity-any-humanitarian-aid-operationeffort-undertaken-in-the-country-why-and-for-whom-beneficiaries-was-it-initiated-i">
+                            29. Risk and disaster preparedness campaign during humanitarian aid operation.identity any humanitarian aid operation/effort undertaken in the country. Why and for whom (beneficiaries) was it initiated? identify any underlying issues/s or controversy/ies surrounding such humanitarian aid operation/effort. ​</h2><br />
+                        <p><strong>Answer:</strong></p><p><strong>What is it?</strong></p><p><strong>Disaster preparedness consists of a set of measures undertaken in advance by governments, organisations, communities, or individuals to better respond and cope with the immediate aftermath of a disaster, whether it be human-induced or caused by natural hazards. The objective is to reduce the loss of life and livelihoods.</strong></p><p><strong></strong></p><p><strong>Simple initiatives can go a long way, for instance in training for search and rescue, establishing early warning systems, developing contingency plans, or stockpiling equipment and supplies.</strong></p><p><strong></strong></p><p><strong>Disaster preparedness plays an important role in building the resilience of communities.</strong></p><p><strong></strong></p><p><strong>Why is this important?</strong></p><p><strong>With increasing population growth, rapid and unplanned urbanisation, climate change, environmental degradation and widespread poverty, a growing number of people and assets are exposed to disasters.</strong></p><p><strong></strong></p><p><strong>Moreover, many of these events occur in fragile and conflict-affected states, thus increasing the complexity of crises and overburdening countries experiencing violent conflict or fragile governance.</strong></p><p><strong></strong></p><p><strong>However, improved practice and response mechanisms save lives and strengthen the countries and communities’ ability to reduce the impact of disasters.</strong></p><p><strong></strong></p><p><strong>Understanding the occurrence and frequency of natural hazards, as well as the risks, vulnerabilities and potential impact on people and assets, helps to improve preparedness.</strong></p><p><strong></strong></p><p><strong>Instead of providing emergency response only, international efforts should help governments and communities invest in understanding risks and building preparedness capacities for pre-emptive and early action. Disaster preparedness is cost-effective and saves aid money.</strong></p><p><strong></strong></p><p><strong>These concepts are agreed upon and firmly embedded into international commitments, including the 2015 Sendai Framework for Disaster Risk Reduction, the Paris Agreement (2015), the Agenda 2030, the New Urban Agenda, and the Grand Bargain commitments.</strong></p><p><strong></strong></p><p><strong>How are we helping?</strong></p><p><strong>The European Commission is at the forefront of promoting risk reduction and anticipatory actions. Signatory to the Sendai Framework for Disaster Risk Reduction (2015-2030), the European Commission supports adopting a risk-informed approach to all EU policies and programmes.</strong></p><p><strong></strong></p><p><strong>The European Commission contributes to Sendai Priority 4 by ensuring that disaster preparedness is systematically embedded into humanitarian aid programmes and projects across all sectors.</strong></p><p><strong></strong></p><p><strong>To support this work, in 2021, the EU’s Civil Protection and Humanitarian Aid Operations department published a new Disaster Preparedness Guidance Note in consultation with partners. The document explains its approach to disaster preparedness and risk-informed humanitarian response.</strong></p><p><strong></strong></p><p><strong>The approach promotes multi-hazard preparedness and anticipatory action as a means for a quicker and more effective response. It focuses not only on disasters related to natural hazards but also on human-induced threats like conflict and violence, epidemics, and biological hazards.</strong></p><p><strong></strong></p><p><strong>Under this approach, the EU aims to mainstream preparedness and risk reduction measures across all its humanitarian programming.</strong></p><p><strong></strong></p><p><strong>In addition, the EU allocates more than € 75 million of its annual humanitarian funding to targeted preparedness actions. This funding strengthens the ability of national and local preparedness systems to respond earlier and better</strong></p><p><strong>The EU invests in early warning systems, monitoring and building national and local capacities for the response.</strong></p><p><strong></strong></p><p><strong>Some examples of disaster preparedness in EU-funded humanitarian aid interventions are:</strong></p><p><strong></strong></p><p><strong>Support communities in Bangladesh to better forecast and act ahead of monsoon floods</strong></p><p><strong>Advice local governments in the Philippines in scaling up inclusive cash assistance programmes that reach marginalised urban communities affected by disasters  </strong></p><p><strong>Support national and local governments in Mozambique in using drone and satellite data for disaster preparedness and to assess the extent of people’s needs following a natural hazard</strong></p><p><strong>Strengthening emergency preparedness and response in the Caribbean through better coordination of humanitarian logistics in the event of a natural hazard.  </strong></p><p></p><p><strong>Explanation:</strong></p><p><strong>pls brainliest me</strong></p><br />
+                                            <h2 class="ez-toc-section" id="discuss-the-common-health-risk-and-issues-for-computer-users-when-operating-a-computer">
+                            30. Discuss the common health risk and issues for computer users when operating a computer.</h2><br />
+                        <p><strong>Answer:</strong></p><p>Inappropriate computer use can cause muscle and joint pain, overuse injuries of the shoulder, arm, wrist or hand, and eyestrain. ... You can reduce or avoid these risks with the correct furniture, better posture and good habits, such as taking rest breaks and restricting time spent playing computer games.</p><p><strong>Explanation:</strong></p><p>#Gravity of the Earth.</p><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/QFGKwD49oNs?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>english</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/thou-shalt-not-covet-thy-neighbor-s-goods.html">Thou Shalt Not Covet Thy Neighbor s Goods</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/idea-being-transmitted-by-the-sender-to-the-listener.html">Idea Being Transmitted By The Sender To The Listener</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/bulkan-philippines.html">Bulkan Philippines</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/90-s-pinoy-tv-shows.html">90 s Pinoy Tv Shows</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/sumandu-kpop-profile.html">Sumandu Kpop Profile</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/powerpoint-templates-for-volleyball.html">Powerpoint Templates For Volleyball</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/sebastian-thor.html">Sebastian Thor</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/shadow-in-tagalog.html">Shadow In Tagalog</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/pagsusulat-ng-nobela.html">Pagsusulat Ng Nobela</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/arnis-player.html">Arnis Player</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/art-ppt.html">Art Ppt</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/mcdonalds-model-of-curriculum-development.html">Mcdonalds Model Of Curriculum Development</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/philplans-graduation-gift.html">Philplans Graduation Gift</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/19th-century-mathematicians.html">19th Century Mathematicians</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/katutubong-disenyo.html">Katutubong Disenyo</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/artikulo-xiv-seksyon-6.html">Artikulo Xiv Seksyon 6</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/ekonomiya-sa-silangang-asya.html">Ekonomiya Sa Silangang Asya</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/anna-guerra.html">Anna Guerra</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/how-does-the-girl-misinterpret-her-father-s-words.html">How Does The Girl Misinterpret Her Father s Words</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://poweredu.github.io/rainbow-passage-speech.html">Rainbow Passage Speech</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://poweredu.github.io"
+                            itemprop="url">QnA</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://poweredu.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://poweredu.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://poweredu.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://poweredu.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+    <script type='text/javascript' src='//jd3j7g5z1fqs.com/96/78/7a/96787a1945876b1a9c10f79941441964.js'></script>
+  <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4739059,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4739059&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>
